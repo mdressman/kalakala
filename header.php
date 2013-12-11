@@ -7,6 +7,8 @@
         <meta charset="<?php bloginfo( 'charset' ) ?>">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <meta name="viewport" content="width=device-width">
+        <script type="text/javascript" src="//use.typekit.net/ytw0jtp.js"></script>
+		<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
         <title><?php wp_title( '|', true, 'right' ) ?></title>
 		<meta name="author" content="">
 		<link rel="author" href="">
@@ -14,21 +16,23 @@
     </head>
     <body <?php body_class() ?>>
 		<header id="page-header">
-			<h1 id="page-logo">
-				<?php if (!is_front_page()): ?>
-					<a href="<?php bloginfo('url') ?>" title="<?php bloginfo('name') ?> - <?php bloginfo('description') ?>">
+			<h1>
+			
+					<a href="<?php bloginfo('url') ?>" title="<?php bloginfo('name') ?> - <?php bloginfo('description') ?>" class="logo">
 						<?php bloginfo('name') ?>
 					</a>
-				<?php else: ?>
-					<span>
-						<?php bloginfo('name') ?>
-					</span>
-				<?php endif; ?>
+				
 			</h1>
 			<?php wp_nav_menu(array(
 				'theme_location' => 'main-nav',
-				'container'      => 'nav',
-				'container_id'   => 'primary-nav'
+				'container'      => false,
+				'menu_class'      => 'menu',
+			)) ?>
+			<?php wp_nav_menu(array(
+				'theme_location' => 'social-menu',
+				'container'      => false,
+				'menu_class'      => 'menu',
 			)) ?>
 		</header>
+
 		<div id="content-wrap">

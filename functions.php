@@ -61,7 +61,7 @@ function register_menus() {
 	register_nav_menus(
 		array(
 			'main-nav' => 'Main Navigation',
-			'secondary-nav' => 'Secondary Navigation',
+			'social-menu' => 'Social Menu',
 			'sidebar-menu' => 'Sidebar Menu'
 		)
 	);
@@ -92,9 +92,6 @@ function add_slug_body_class( $classes ) {
 	return $classes;
 }
 add_filter( 'body_class', 'add_slug_body_class' );
-
-
-
 
 
 function singleRepeaterField( $fieldname, $subfield ) {

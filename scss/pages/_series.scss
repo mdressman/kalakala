@@ -1,0 +1,69 @@
+.responsive-container iframe { 
+	@extend %ab;
+	top: 0; 
+	left: 0; 
+	width: 100%; 
+	height: 100%; 
+}
+
+
+.series__Container {
+	@extend %rel;
+	@extend %cf;
+	max-width: 900px;
+	margin: 0 auto;
+	background: rgba($black, .85);
+	margin-top: 3rem;
+	padding-bottom: 1.5rem;
+}
+.series {
+	padding: 1.5rem;
+	
+	
+
+	.project {
+		&:not(.active) {
+			@extend %hidden;
+		}
+		&.active {
+			@extend %bl;
+			@extend %float-left;
+			background: white;
+			padding: 2.5rem;
+			@include media(tablet) {
+				width: 50%;
+			}
+		}
+	}
+
+}
+
+
+#playArea {
+	@extend %rel;
+	width: 100%;
+	height: auto;
+	img {
+		width: 100%; 
+		height: auto;
+	}
+
+	.video {
+		@extend %ab;
+		width: 100%;
+		height: 100%;
+		
+	}
+}
+
+
+
+.series__Title  {
+	color: $yellow;
+	@extend %center;
+	@extend %collapsed;
+}
+
+.series__Projects {
+	@extend %ul;
+}

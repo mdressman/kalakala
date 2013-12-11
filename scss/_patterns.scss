@@ -1,0 +1,155 @@
+%none {
+	display: none;
+}
+%ib, .ib {
+	@include media(tablet) {
+		display: inline-block;
+		vertical-align: middle;
+		font-size: 0;
+
+		a {
+			font-size: 1rem;
+		}
+	}
+	
+}
+
+
+%cf  {
+	&:before,
+	&:after {
+	    content: " "; /* 1 */
+	    display: table; /* 2 */
+	}
+	
+	&:after {
+	    clear: both;
+	}
+}
+
+
+
+
+%float-right {
+	@include media(tablet) {
+		float: right;
+	}
+	
+}
+%float-left {
+	@include media(tablet) {
+		float: left;
+	}
+}
+
+%bl {
+	display: block;
+}
+
+%ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+%menu-style {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	li {
+		@extend %float-left;
+	}
+}
+
+
+%hoverTransition {
+	@include transition (all .3s ease-in-out);
+}
+
+%quickTransition {
+	@include transition (all .2s ease-in-out);
+}
+
+%nodec {
+	text-decoration: none;
+}
+
+%center {
+	text-align: center;
+}
+
+%upcase {
+	text-transform: uppercase;
+}
+
+
+%rel {
+	position: relative;
+}
+%ab {
+	position: absolute;
+}
+%fix  {
+	position: fixed;
+}
+
+
+
+
+
+
+%hv-center {
+	top: 0; bottom: 0;
+	right: 0; left: 0;
+	margin: auto;
+}
+
+%hidden {
+	* {
+		height: 0;
+		width: 0;
+		padding: 0;
+		margin: 0;
+		overflow: hidden;
+	}
+}
+
+%ir, .ir {
+    font: 0/0 a;
+    text-shadow: none;
+    color: transparent;
+}
+
+
+
+%centered {
+	text-align: center;
+}
+
+
+
+
+%collapsed, .collapsed, .collapsed * {
+	height: 0;
+	max-height: 0;
+	padding-top: 0;
+	padding-bottom: 0;
+	overflow: hidden;
+
+}
+
+
+
+.playButton {
+	@extend %ir;
+	@extend %bl;
+	width: 74px;
+	height: 74px;
+	@include svg_bg('play');
+	opacity: .75;
+	@extend %ab;
+	@extend %hv-center;
+	&:hover {
+		opacity: 1;
+	}
+}
