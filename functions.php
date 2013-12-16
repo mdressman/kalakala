@@ -1,9 +1,21 @@
 <?php
 
 add_action('wp_enqueue_scripts', 'theme_enqueue_scripts');
+
+
+
+function de_script() {
+   wp_dequeue_script( 'jquery' );
+   wp_deregister_script( 'jquery' );
+   wp_deregister_script('wp-mediaelement');
+   wp_deregister_style('wp-mediaelement');
+}
+
+
 function theme_enqueue_scripts(){
-	wp_dequeue_script( 'jquery' );
-	wp_register_script('jquerycdn', '//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min', array(), false, false);
+	
+	//wp_dequeue_script( 'jquery' );
+	//wp_register_script('jquerycdn', '//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min', array(), false, false);
 
 
 

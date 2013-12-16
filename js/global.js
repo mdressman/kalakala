@@ -2,15 +2,19 @@ require.config({
 	"baseUrl": directory.path,
 	"paths": {
 		"jquery": "jquery/jquery",
-		"fitvids": "fitvids/jquery.fitvids"
+		"fitvids": "fitvids/jquery.fitvids",
+		"me_player": "mediaelement/build/mediaelement-and-player.min",
+		"me": "mediaelement/build/mediaelement.min"
 	},
 	shim:
 	{
-		"fitvids": ["jquery"]
+		"fitvids": ["jquery"],
+		"mag_pop": ["jquery"],
+		'me_player': ["me"]
 	}
 });
 
-require(['jquery', 'fitvids'], function($, fitvids) {
+require(['jquery', 'fitvids', 'me_player', 'me'], function($) {
 	
 	function loadActiveVideo() {
 		$activeVideo = $('.project.active').attr('data-video');
