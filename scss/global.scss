@@ -1,10 +1,5 @@
-@import '../vendor/normalize-scss/normalize', 'bourbon/bourbon', 'mixins','patterns','icons';
-$black: #231f20;
-$red: #d36327;
-$yellow: #fff1cd;
-$grey: #d4cec6;
-$brown: #9d958c;
-$pink: #f5cab3;
+@import '../vendor/normalize-scss/normalize', 'bourbon/bourbon', 'mixins','patterns','icons','variables';
+
 
 *, *:before, *:after {
 	@include box-sizing(border-box);
@@ -32,6 +27,11 @@ h2 ,h3 {
 
 }
 
-@import 'parts/header';
-@import 'pages/home', 'pages/series';
+a {
+	color: $color_link;
+	text-decoration: none;
+}
+
+@import 'parts/header', 'parts/swiper', 'parts/video';
+@import 'pages/home', 'pages/series', 'pages/work';
 

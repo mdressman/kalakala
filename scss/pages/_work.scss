@@ -1,0 +1,21 @@
+.page-work {
+	
+	.series-wrapper {
+		position: absolute;
+		bottom: 56px;
+		width: inherit;
+		padding: 20px;
+	}
+
+	.series {
+		background: rgba(255, 255, 255, 0.94);
+		color: $color_body_copy;
+		padding: 28px 20px 16px 20px;
+	}
+
+	h2.series-title {
+		font-size: 4em;
+		margin: 0; padding: 0;
+		font-weight: 600;
+	}
+}

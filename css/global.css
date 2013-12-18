@@ -400,13 +400,13 @@ table {
   }
 }
 
-.series__Container:before, .series__Container:after {
+.series__Container:before, .series__Navigation:before, .series__Container:after, .series__Navigation:after {
   content: " ";
   /* 1 */
   display: table;
   /* 2 */
 }
-.series__Container:after {
+.series__Container:after, .series__Navigation:after {
   clear: both;
 }
 
@@ -417,7 +417,7 @@ table {
 }
 
 @media only screen and (min-width: 43.75em) {
-  #page-header .menu li, .series .project.active {
+  #page-header .menu li, .series .project.active, .series__Navigation {
     float: left;
   }
 }
@@ -426,7 +426,7 @@ table {
   display: block;
 }
 
-.series__Projects {
+.series__Navigation {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -454,7 +454,7 @@ table {
   position: relative;
 }
 
-.playButton, .responsive-container iframe, #playArea .video {
+.playButton, #playArea .video {
   position: absolute;
 }
 
@@ -480,7 +480,7 @@ table {
   color: transparent;
 }
 
-.series__Title, .collapsed, .collapsed * {
+.collapsed, .collapsed * {
   height: 0;
   max-height: 0;
   padding-top: 0;
@@ -562,6 +562,12 @@ table {
   content: "\e609";
 }
 
+/* ==========================================================================
+	Variables
+/* ========================================================================== */
+/* Directories */
+/* Colors */
+/* Font Sizes */
 *, *:before, *:after {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -583,6 +589,11 @@ body {
 
 h1 {
   font-size: 2.5rem;
+}
+
+a {
+  color: #d36327;
+  text-decoration: none;
 }
 
 #page-header {
@@ -631,7 +642,6 @@ h1 {
   width: 161px;
   height: 70px;
   background-image: url("logo.png");
-  background-image: none, url("logo.svg");
   background-size: 100% auto;
   background-repeat: no-repeat;
 }
@@ -644,13 +654,296 @@ h1 {
   }
 }
 
-.responsive-container iframe {
-  top: 0;
-  left: 0;
-  width: 100%;
+/*
+ * Swiper - Mobile Touch Slider CSS
+ * http://www.idangero.us/sliders/swiper
+ *
+ * Vladimir Kharlampidi, The iDangero.us
+ * http://www.idangero.us/
+ * 
+ * Copyright 2012, Vladimir Kharlampidi
+ * The iDangero.us
+ * http://www.idangero.us
+ *
+ * Licensed under GPL & MIT
+ *
+*/
+/* Swiper Styles */
+.swiper-container {
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
+  backface-visibility: hidden;
+  /* Fix of Webkit flickering */
+  z-index: 1;
   height: 100%;
 }
 
+.swiper-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  -webkit-transition-property: -webkit-transform, left, top;
+  -webkit-transition-duration: 0s;
+  -webkit-transform: translate3d(0px, 0, 0);
+  -webkit-transition-timing-function: ease;
+  -moz-transition-property: -moz-transform, left, top;
+  -moz-transition-duration: 0s;
+  -moz-transform: translate3d(0px, 0, 0);
+  -moz-transition-timing-function: ease;
+  -o-transition-property: -o-transform, left, top;
+  -o-transition-duration: 0s;
+  -o-transform: translate3d(0px, 0, 0);
+  -o-transition-timing-function: ease;
+  -o-transform: translate(0px, 0px);
+  -ms-transition-property: -ms-transform, left, top;
+  -ms-transition-duration: 0s;
+  -ms-transform: translate3d(0px, 0, 0);
+  -ms-transition-timing-function: ease;
+  transition-property: transform, left, top;
+  transition-duration: 0s;
+  transform: translate3d(0px, 0, 0);
+  transition-timing-function: ease;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.swiper-slide {
+  float: left;
+  height: 100%;
+  position: relative;
+}
+
+/* IE10 Windows Phone 8 Fixes */
+.swiper-wp8-horizontal {
+  -ms-touch-action: pan-y;
+}
+
+.swiper-wp8-vertical {
+  -ms-touch-action: pan-x;
+}
+
+.previous, .next {
+  font-size: 6em;
+  color: #231f20;
+  opacity: 0.91;
+  position: absolute;
+  top: 40%;
+}
+
+.previous {
+  left: 20px;
+}
+
+.next {
+  right: 20px;
+}
+
+/*	BigVideo Styles 
+	You may need to adjust these styles to get this working right in your design. 
+*/
+#big-video-wrap {
+  overflow: hidden;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 120px;
+  left: 0;
+}
+
+#big-video-vid, #big-video-image {
+  position: absolute;
+}
+
+#big-video-control-container {
+  position: fixed;
+  bottom: 20px;
+  padding: 0 20px;
+  width: 100%;
+  display: none;
+  -webkit-transition-duration: 0.6s;
+  -moz-transition-duration: 0.6s;
+  -ms-transition-duration: 0.6s;
+  -o-transition-duration: 0.6s;
+  transition-duration: 0.6s;
+}
+
+#big-video-control {
+  width: 100%;
+  height: 16px;
+  position: relative;
+}
+
+#big-video-control-middle {
+  margin: 0 56px 0 24px;
+}
+
+#big-video-control-bar {
+  width: 100%;
+  height: 16px;
+  position: relative;
+  cursor: pointer;
+}
+
+#big-video-control-progress {
+  position: absolute;
+  top: 7px;
+  height: 3px;
+  width: 0%;
+  background: #fff;
+}
+
+#big-video-control-track {
+  position: absolute;
+  top: 8px;
+  height: 1px;
+  width: 100%;
+  background: #fff;
+}
+
+#big-video-control-bound-left {
+  left: 0;
+}
+
+#big-video-control-bound-right {
+  right: -1px;
+}
+
+#big-video-control-track .ui-slider-handle {
+  opacity: 0;
+}
+
+#big-video-control-playhead {
+  left: 30%;
+}
+
+#big-video-control-play {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 16px;
+  width: 16px;
+  background-image: url("bigvideo.png");
+}
+
+#big-video-control-timer {
+  position: absolute;
+  top: 1px;
+  right: 0;
+  color: #fff;
+  font-size: 11px;
+}
+
+#big-video-control-playhead, #big-video-control-bound-left, #big-video-control-bound-right {
+  position: absolute;
+  top: 0;
+  height: 16px;
+  width: 1px;
+  background: #fff;
+}
+
+#big-video-control .ui-slider-handle {
+  border-left: solid 1px #fff;
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  top: -8px;
+}
+
+.transparent {
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: alpha(opacity=0);
+  -moz-opacity: 0;
+  -khtml-opacity: 0;
+  opacity: 0;
+}
+
+.vjs-big-play-button {
+  display: none !important;
+}
+
+.fullscreen-video {
+  /* Video Pages */
+  /* Nav */
+}
+.fullscreen-video .wrapper {
+  position: absolute;
+  width: 500%;
+  height: 100%;
+  z-index: 0;
+}
+.fullscreen-video .screen {
+  position: relative;
+  height: 100%;
+  width: 20%;
+  /*  NOTE: numVideos/100%  */
+  float: left;
+  overflow: hidden;
+}
+.fullscreen-video .big-image {
+  min-width: 100%;
+  min-height: 100%;
+  height: auto;
+  width: auto;
+}
+.fullscreen-video .video-title {
+  position: absolute;
+  top: 5%;
+  right: 5%;
+  opacity: .5;
+  margin: 40px 0 0 0;
+  padding: 0;
+  line-height: .65;
+  font-size: 4em;
+  text-transform: uppercase;
+}
+.fullscreen-video #next-btn {
+  right: 0;
+}
+.fullscreen-video nav#next-btn {
+  position: absolute;
+  right: 5%;
+  top: 45%;
+  padding: 20px;
+  background: #000;
+  border-radius: 40px;
+  opacity: .4;
+  cursor: pointer;
+  z-index: 1000;
+}
+.fullscreen-video nav#next-btn:hover {
+  opacity: .6;
+}
+.fullscreen-video .next-icon {
+  display: block;
+  border-top: solid 2px #fff;
+  border-right: solid 2px #fff;
+  width: 20px;
+  height: 20px;
+  position: relative;
+  left: -5px;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+  color: #fff;
+  text-decoration: none;
+}
+
+/*.responsive-container iframe { 
+	@extend %ab;
+	top: 0; 
+	left: 0; 
+	width: 100%; 
+	height: 100%; 
+}*/
 .series__Container {
   max-width: 900px;
   margin: 0 auto;
@@ -668,7 +961,7 @@ h1 {
 }
 @media only screen and (min-width: 43.75em) {
   .series .project.active {
-    width: 50%;
+    width: 420px;
   }
 }
 
@@ -687,4 +980,28 @@ h1 {
 
 .series__Title {
   color: #fff1cd;
+  font-weight: 600;
+}
+
+.series__Navigation {
+  width: 50%;
+  padding-left: 36px;
+}
+
+.page-work .series-wrapper {
+  position: absolute;
+  bottom: 56px;
+  width: inherit;
+  padding: 20px;
+}
+.page-work .series {
+  background: rgba(255, 255, 255, 0.94);
+  color: #231f20;
+  padding: 28px 20px 16px 20px;
+}
+.page-work h2.series-title {
+  font-size: 4em;
+  margin: 0;
+  padding: 0;
+  font-weight: 600;
 }

@@ -31,7 +31,7 @@
 			border-right: 1px solid $yellow;
 		}
 		li.current-menu-item a {
-			color: $red;
+			color: $color_link;
 		}
 		a {
 			font-size: 1rem;
@@ -60,7 +60,9 @@
 	display: block;
 	width: 161px;
 	height: 70px;
-	@include svg_bg('logo');
+	background-image: url('logo.png');
+	background-size: 100% auto;
+  	background-repeat: no-repeat;
 	@include media(tablet) {
 		@include ab-h-center(-85px);
 		margin-top: -20px;

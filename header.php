@@ -9,6 +9,7 @@
         <meta name="viewport" content="width=device-width">
         <script type="text/javascript" src="//use.typekit.net/ytw0jtp.js"></script>
 		<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+		<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
         <title><?php wp_title( '|', true, 'right' ) ?></title>
 		<meta name="author" content="">
 		<link rel="author" href="">

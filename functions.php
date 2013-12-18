@@ -7,8 +7,6 @@ add_action('wp_enqueue_scripts', 'theme_enqueue_scripts');
 function de_script() {
    wp_dequeue_script( 'jquery' );
    wp_deregister_script( 'jquery' );
-   wp_deregister_script('wp-mediaelement');
-   wp_deregister_style('wp-mediaelement');
 }
 
 
@@ -28,7 +26,6 @@ function theme_enqueue_scripts(){
 	wp_enqueue_script('require');
 
 	wp_register_script('global', get_bloginfo('template_url') . '/js/global.js', array('require'), false, true);
-
 	wp_register_script('livereload', 'http://localhost:35729/livereload.js?snipver=1', null, false, true);
 	
 
