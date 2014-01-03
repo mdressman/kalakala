@@ -1,0 +1,150 @@
+#goods {
+	padding-bottom: 5rem;
+}
+.tumblrBlog {
+	border-bottom: 1.5px solid $black;
+	text-align: left;
+	max-width: 920px;
+	margin: 0 auto;
+
+	&.alpha {
+		border-top: 1.5px solid $black;
+	}
+	&:last-child {
+		margin-bottom: 4rem;
+	}
+	ol {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+	padding: 3rem 0;
+
+	
+}
+
+
+.tumblr_posts, .b_logo, .logoColumn {
+	display: inline-block;
+	vertical-align: middle;
+}
+.tumblr_posts {
+	@include media(tablet) {
+		width: 600px;
+	}
+	
+}
+
+
+.tumblr_photo_post {
+	img {
+		width: 212px;
+		@extend %ib;
+		margin-right: 2rem;
+	}
+	.tumblr_caption {
+		@extend %ib;
+		width: 350px;
+	}
+
+}
+.logoColumn {
+	@extend %center;
+	width: 212px;
+	
+	@include media(tablet) {
+		
+		margin: 0 2rem;
+	}
+}
+
+.b_logo {
+	@include media(mobile) {
+		display: block;
+	}
+	background: url(tumblrBlogLogos.png) no-repeat;
+	
+}
+
+
+%titleStyle {
+	@extend %bl;
+	font-size: 2rem;
+	line-height: 2.5rem;
+	margin-bottom: 1rem;
+	font-weight: bold;
+	max-width: 350px;
+}
+.tumblr_title {
+	@extend %titleStyle;
+}
+.tumblr_description {
+	max-width: 350px;
+}
+#pickings {
+	font-family: "abril-display";
+	.tumblr_caption > p {
+		@extend %titleStyle;
+		a {
+			display: block;
+			font-size: 1rem;
+			line-height: 1.5;
+		}
+	}
+	.b_logo {
+		background-position: -12px -12px;
+		width: 129px;
+		height: 127px;
+	}
+}
+#periscope {
+	font-family: "news-gothic-std";
+	.tumblr_link_post > a {
+		@extend %titleStyle;
+		@extend %upcase;
+		color: $black;
+		font-family: "alternate-gothic-no-1-d";
+		font-weight: 100;
+		letter-spacing: .125rem;
+		&:hover {
+			color: $orange;
+		}
+	}
+	.b_logo {
+		background-position: -10px -162px;
+		width: 141px;
+		height: 141px;
+	}
+}
+#lightbox {
+	.b_logo {
+		background-position: -10px -344px;
+		width: 162px;
+		height: 74px;
+	}
+} 
+#makeyourslikemine {
+	h1, h2 ,h3, .tumblr_title {
+		font-family: "ff-karbid-slab-web-pro";
+	}
+	font-family: "apertura";
+	.b_logo {
+		background-position: -4px -443px;
+		width: 168px;
+		height: 103px;
+	}
+} 
+
+
+
+#eveningredness {
+	h1, h2, h3 {
+		font-family: "news-gothic-std";
+	}
+	font-family: "abril-display";
+	.b_logo {
+		background-position: -8px -576px;
+		width: 167px;
+		height: 173px;
+	}
+} 

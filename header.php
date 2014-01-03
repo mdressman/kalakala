@@ -7,9 +7,13 @@
         <meta charset="<?php bloginfo( 'charset' ) ?>">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <meta name="viewport" content="width=device-width">
-        <script type="text/javascript" src="//use.typekit.net/ytw0jtp.js"></script>
-		<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
-		<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+        <?php if(is_page('the-goods')): ?>
+        	<script type="text/javascript" src="//use.typekit.net/pom2awi.js"></script>
+			<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+		<?php else: ?>
+        	<script type="text/javascript" src="//use.typekit.net/ytw0jtp.js"></script>
+			<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+		<?php endif; ?>
         <title><?php wp_title( '|', true, 'right' ) ?></title>
 		<meta name="author" content="">
 		<link rel="author" href="">
@@ -29,11 +33,8 @@
 				'container'      => false,
 				'menu_class'      => 'menu',
 			)) ?>
-			<?php wp_nav_menu(array(
-				'theme_location' => 'social-menu',
-				'container'      => false,
-				'menu_class'      => 'menu',
-			)) ?>
+			<?php get_template_part('social', 'nav'); ?>
+			<a href="#" id="mobileMenuToggle"><span class="icon-menu"></span></a>
 		</header>
 
 		<div id="content-wrap">

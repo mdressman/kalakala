@@ -7,7 +7,24 @@
       }
 
   }
-  
+  @if $type == bigMobile {
+
+      @media only screen and (min-width:em(600))  {
+          @content;
+      }
+
+
+  }
+
+
+  @if $type == beforeDesktop {
+
+      @media only screen and (max-width:em(1200))  {
+          @content;
+      }
+
+
+  }
 
   @if $type == tablet {
 
@@ -44,7 +61,7 @@
 
   @if $type == tallscreen {
 
-      @media only screen and (min-height:em(600)) and (min-width:em(1000)) {
+      @media only screen and (min-height:em(700)) and (min-width:em(1000)) {
           @content;
       }
 

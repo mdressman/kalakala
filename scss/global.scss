@@ -1,4 +1,4 @@
-@import '../vendor/normalize-scss/normalize', 'bourbon/bourbon', 'mixins','patterns','icons','variables';
+@import '../vendor/normalize-scss/normalize', 'bourbon/bourbon', 'mixins','icons','variables','patterns';
 
 
 *, *:before, *:after {
@@ -7,21 +7,26 @@
 
 html {
 	background: lighten($black, 5%);
+
 	font-family: "proxima-nova";
-	font-size: 100%;
-	font-size: 11px;
 	height: 100%;
+	font-size: 62.5%;
+	@include media(tablet) {
+		font-size: 75%;
+	}
 	
 }
 
 body {
 	font-size: 1rem;
 	height: inherit;
+	line-height: 1.6rem;
 	
 }
 
 h1 {
 	font-size: 2.5rem;
+	@extend %upcase;
 }
 h2 ,h3 {
 
@@ -32,6 +37,17 @@ a {
 	text-decoration: none;
 }
 
+p {
+	margin: 0 0 2rem 0;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+#content-wrap {
+
+}
 @import 'parts/header', 'parts/swiper', 'parts/video';
-@import 'pages/home', 'pages/series', 'pages/work';
+@import 'pages/home', 'pages/series', 'pages/work', 'pages/backstory', 'pages/hello', 'pages/goods';
 

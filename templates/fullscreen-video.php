@@ -2,6 +2,7 @@
 /*
 Template Name: Full Screen Video
 */
+
 get_header(); ?>
 <?php if (is_page()): the_post() ?>
 
@@ -9,28 +10,27 @@ get_header(); ?>
 
 	$video_loop = get_field('video_loop');
 		
-	if ($video_loop):
-		$c = 0;
-		foreach ($video_loop as $video):
-			$c++;
-	?>
-		
-
-		<div class="screen" id="screen-<?php echo $c ?>" data-video="<?php echo $video['video_url']; ?>">
-	        <img src="<?php echo $video['fallback_image']; ?>" class="big-image" />
-	    </div>
-
-		<?php endforeach; ?>
-
-
-
-	<?php endif; ?>
-		<nav id="next-btn">
-	    	<a href="#" class="next-icon"></a>
-		</nav>
-  
 	
+		
+			$attachment_id = get_field('fallback_image');
+			$size = "full"; 
+			 
+			$fallbackImage = wp_get_attachment_image_src( $attachment_id, $size );
+			
 
+	?>
+		<div id="homepageVideoWrapper">
+
+			<div class="screen" id="videoBG" data-video="<?php the_field('video_url'); ?>">
+	        	<img src="<?php echo $fallbackImage[0]; ?>" class="big-image" />
+	    	</div>
+	    	<div class="loading">
+	    		<span class="circle"></span>
+	    		<span class="circle"></span>
+	    		<span class="circle"></span>
+	    	</div>
+
+	    </div>
 	
 <?php endif; ?>
 

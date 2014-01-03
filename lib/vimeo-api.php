@@ -75,31 +75,3 @@ switch ($_SESSION['vimeo_state']) {
 }
 
 ?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-<head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <title>Vimeo Advanced API OAuth Example</title>
-</head>
-<body>
-
-    <h1>Vimeo Advanced API OAuth Example</h1>
-    <p>This is a basic example of Vimeo's new OAuth authentication method. Everything is saved in session vars, so <a href="?clear=all">click here if you want to start over</a>.</p>
-
-    <?php if ($_SESSION['vimeo_state'] == 'start'): ?>
-        <p>Click the link to go to Vimeo to authorize your account.</p>
-        <p><a href="<?= $authorize_link ?>"><?php echo $authorize_link ?></a></p>
-    <?php endif ?>
-
-    <?php if ($ticket): ?>
-        <pre><?php print_r($ticket) ?></pre>
-    <?php endif ?>
-
-    <?php if ($videos): ?>
-        <pre><?php print_r($videos) ?></pre>
-    <?php endif ?>
-
-</body>
-</html>

@@ -31,13 +31,13 @@
 
 
 %float-right {
-	@include media(tablet) {
+	@include media(desktop) {
 		float: right;
 	}
 	
 }
 %float-left {
-	@include media(tablet) {
+	@include media(desktop) {
 		float: left;
 	}
 }
@@ -57,8 +57,10 @@
 	padding: 0;
 	margin: 0;
 	li {
-		@extend %float-left;
+		display: inline-block;
+		font-size: 1rem;
 	}
+
 }
 
 
@@ -83,7 +85,7 @@
 }
 
 
-%rel {
+%rel, .relative {
 	position: relative;
 }
 %ab {
@@ -114,6 +116,9 @@
 	}
 }
 
+
+
+
 %ir, .ir {
     font: 0/0 a;
     text-shadow: none;
@@ -138,7 +143,31 @@
 
 }
 
+%flip-horizontal {
+    -moz-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    transform: scaleX(-1);
+    -ms-filter: fliph; /*IE*/
+    filter: fliph; /*IE*/
+}
+%flip-vertical {
+    -moz-transform: scaleY(-1);
+    -webkit-transform: scaleY(-1);
+    -o-transform: scaleY(-1);
+    transform: scaleY(-1);
+    -ms-filter: flipv; /*IE*/
+    filter: flipv; /*IE*/
+}
 
+%twoColumn {
+	@include media(tablet) {
+		@include columns(2);
+		@include column-gap(20px);	
+
+	}
+	
+}
 
 .playButton {
 	@extend %ir;
@@ -151,5 +180,315 @@
 	@extend %hv-center;
 	&:hover {
 		opacity: 1;
+	}
+}
+
+
+.nextPrevIcon i {
+	@extend %ir;
+	@extend %bl;
+	width: 74px;
+	height: 74px;
+	@include svg_bg('next-prev');
+	opacity: .3;
+	@include transition (all .3s ease-in-out);
+	&:hover {
+		opacity: 1;
+	}
+	@include media(mobile) {
+		display: none !important;
+	}
+
+	
+}
+
+.js .nextPrevIcon i {
+	opacity: 0;
+}
+.nextPrevIcon.next i {
+		@extend %flip-horizontal;
+	}
+
+
+.page__Title  {
+	color: $yellow;
+	@extend %center;
+	font-weight: 600;
+	@extend %upcase;
+	letter-spacing: .25rem;
+	margin: 0;
+	padding: 1.5rem 0;
+}
+
+#content-wrap {
+	padding-bottom: 3rem;
+}
+
+.page__Container {
+	@extend %rel;
+	@extend %cf;
+	max-width: 900px;
+	margin: 0 auto;
+	background: rgba($black, .85);
+	margin-top: 3rem;
+
+}
+
+.titleContainer {
+	@extend %ib;
+	color: $orange;
+	@extend %center;
+	font-size: 2.25rem;
+	line-height: 5rem;
+	border-bottom: 1px solid $darkgrey;
+	margin-bottom: 42px;
+
+	@include media(tablet) {
+		width: 337px;
+
+	}
+}
+
+.section__Title, .insetBorder {
+		@extend %center;
+	
+	}
+
+.whiteBG {
+	background: white;
+}
+.insetBorder {
+	border: 1px solid $peach;
+	margin: 1.5rem;
+	padding-bottom: 42px;
+}
+.bigPad {
+	padding-right: 2rem;
+	padding-left: 2rem;
+	@include media(tablet) {
+		padding-right: 5rem;
+		padding-left: 5rem;
+	}
+	
+}
+
+.subHeading {
+	max-width: 660px;
+	margin: 0 auto;
+}
+
+.icon-big {
+	font-size: 300%;
+	@include media(tablet) {
+		font-size: 700%;
+	}
+	
+}
+
+.singlePost__Nav {
+	a {
+		@extend %ab;
+		@extend %hv-center;
+		color: $grey;
+		letter-spacing: .125rem;
+		@include media(tablet){
+			bottom: auto;
+			top: 80px;
+			height: 84px;
+			width: 84px;
+			
+			&.nextPost {
+				left: auto;
+				margin-right: 32px;
+				margin-right: -6rem;
+				margin-right: -8vw;
+			}
+			&.prevPost {
+				right: auto;
+				margin-left: 32px;
+				margin-left: -6rem;
+				margin-left: -8vw;
+				text-align: right;
+			}
+			@include media(desktop) {
+				top: 0;
+				bottom: 0;
+			}
+
+			&:hover {
+				color: $orange;
+			}
+		}
+
+		i {
+			@extend %rel;
+			top: -1em;
+		}
+
+		@include media(mobile) {
+			top: -75px;
+			left: 1rem;
+			right: auto;
+			&.nextPost {
+				left: auto;
+				right: 1rem;
+			}
+		}
+
+	}
+}
+
+
+.loading {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  height: 1rem;
+  width: 100%;
+  //border-radius: 5rem;
+  text-align: center;
+}
+
+.circle{
+position: relative;
+width:1rem;
+height:1rem;
+background:black;
+display:inline-block;
+-webkit-border-radius:1rem;
+   -moz-border-radius:1rem;
+        border-radius:1rem;
+margin:0 .25rem;
+-webkit-animation:rotateplane 1.2s infinite ease-in-out;
+   -moz-animation:rotateplane 1.2s infinite ease-in-out;
+    -ms-animation:rotateplane 1.2s infinite ease-in-out;
+     -o-animation:rotateplane 1.2s infinite ease-in-out;
+        animation:rotateplane 1.2s infinite ease-in-out;
+}
+.circle:nth-child(2){
+-webkit-animation-delay:.25s;
+   -moz-animation-delay:.25s;
+    -ms-animation-delay:.25s;
+     -o-animation-delay:.25s;
+        animation-delay:.25s;
+}
+.circle:nth-child(3){
+-webkit-animation-delay:.5s;
+   -moz-animation-delay:.5s;
+    -ms-animation-delay:.5s;
+     -o-animation-delay:.5s;
+        animation-delay:.5s;
+}
+
+@-webkit-keyframes rotateplane {
+  0%   { opacity: 0.0; }
+  50%  { opacity: 1.0; }
+  100% { opacity: 0.0; }
+}
+@-moz-keyframes rotateplane {
+  0%   { opacity: 0.0; }
+  50%  { opacity: 1.0; }
+  100% { opacity: 0.0; }
+}
+@-o-keyframes rotateplane {
+  0%   { opacity: 0.0; }
+  50%  { opacity: 1.0; }
+  100% { opacity: 0.0; }
+}
+@keyframes rotateplane {
+  0%   { opacity: 0.0; }
+  50%  { opacity: 1.0; }
+  100% { opacity: 0.0; }
+}
+
+
+
+form {
+	padding: 3rem 0;
+	text-align: left;
+	input, textarea {
+		@extend %bl;
+		-webkit-appearance: none;
+		appearance: none;
+		box-shadow: none;
+		border: 1px solid $brown;
+		width: 100%;
+		margin-bottom: 2rem;
+
+	}
+	label {
+		@extend %upcase;
+	}
+}
+
+.gform_heading {
+	max-width: 400px;
+	margin: 1rem auto;
+	text-align: center;
+}
+
+.shareToggle, .shareButtons a {
+	color: $brown;
+	&:hover {
+		color: $orange;
+	}
+}
+
+
+
+
+.shareContainer {
+	@include media(mobile) {
+		position: fixed;
+		bottom: 0;
+		width: 100%;
+		background: $black;
+	}
+}
+.shareToggle {
+	font-size: 2rem;
+	display: inline-block;
+	@include media(tablet) {
+		position: absolute;
+		top: 1rem;
+		right: 1rem;
+	}
+	@include media(mobile) {
+		display: none;
+	}
+}
+.shareButtons {
+	max-height: 0;
+	overflow: hidden;
+	font-size: 2rem;
+	display: inline-block;
+	@include media(tablet) {
+		width: 2rem;
+		position: absolute; 
+		top: 1rem;
+		right: -3rem;
+		a {
+			display: block;
+			margin-bottom: .5rem;
+		}
+	}
+
+	@include media(mobile) {
+		max-height: none;
+		text-align: center;
+		width: 100%;
+		a {
+			display: inline-block;
+			margin: 0 1rem;
+			padding: 1rem;
+		}
+	}
+
+	
+	&.active {
+		max-height: 999999em;
 	}
 }

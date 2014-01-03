@@ -1,0 +1,50 @@
+.videoContainer {
+	@extend %rel;
+}
+.page-backstory {
+	.page__Container {
+		max-width: 860px;
+	}
+	.textBlock {
+		background: white;
+		padding: 1rem;
+		@extend %twoColumn;
+		@include media(tablet) {
+			margin: 1.5rem;
+			padding: 30px;
+		}
+	}
+}
+
+#team {
+
+
+	.portrait, .bio {
+		@include media(bigMobile) {
+			display: inline-block;
+			vertical-align: middle;
+		}
+		
+		
+	}
+	.portrait {
+		@include media(bigMobile) {
+			margin-right: 5rem;
+			margin-bottom: 2rem;
+		}
+	}
+	.bio {
+		text-align: left;
+		margin: 1rem 0 2rem;
+		@include media(bigMobile) {
+			width: 50%;
+			margin: 0;
+		}
+		@include media(desktop) {
+			width: 428px;
+		}
+	}
+}
+
+
+

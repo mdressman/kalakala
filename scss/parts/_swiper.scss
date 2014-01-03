@@ -84,18 +84,36 @@
 	font-size: 6em;
 	color: $darkgrey;
 	opacity: 0.91;
-	position: absolute;
-	top: 40%;
-	
+	@extend %ab;
+	top: 0;
+	height: 100%;
+	width: 100px;
+	z-index: 9;
+	.relative {
+		height: 100%;
+	}
+
+	.relative i {
+		@extend %ab;
+		@extend %hv-center;
+		height: 75px;
+
+	}
+
+	@include media(mobile) {
+		display: none !important;
+	}
+
 	
 }
 
 .previous {
-	left: 20px;
+	left: 0;
 }
 
 .next {
-	right: 20px;
+	right: 0;
+
 
 }
 

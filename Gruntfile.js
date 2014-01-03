@@ -12,8 +12,8 @@ module.exports = function(grunt) {
 				}
 			},
 			js : {
-				files : ['js/**/*.js'],
-				tasks : ['jshint'],
+				files : ['js/*.js'],
+				tasks : ['jshint','concat', 'uglify'],
 				options : {
 					livereload : true
 				}
@@ -83,6 +83,55 @@ module.exports = function(grunt) {
 			}
 		},
 
+		concat: {
+  		  mobile: {
+  		    src: ['vendor/fastclick/lib/fastclick.js', 'js/mobile.js'],
+  		    dest: 'js/src/mobile.js',
+  		  },
+  		  homepage: {
+  		    src: ['vendor/jquery/jquery.js', 'vendor/jquery-ui/ui/jquery-ui.js', 'vendor/video.js/video.js', 'vendor/BigVideo.js/lib/bigvideo.js','js/src/prefixfree.js', 'js/src/mobile.js', 'js/homepage.js'],
+  		    dest: 'js/src/homepage.js',
+  		  },
+  		  work: {
+  		    src: ['vendor/fitvids/jquery.fitvids.js', 'vendor/swiper/dist/idangerous.swiper-2.4.js', 'js/src/approach.js', 'js/dist/mobile.min.js', 'js/work.js'],
+  		    dest: 'js/src/work.js',
+  		  },
+  		  series: {
+  		    src: ['vendor/fitvids/jquery.fitvids.js', 'js/dist/mobile.min.js', 'js/series.js'],
+  		    dest: 'js/src/series.js',
+  		  },
+  		  goods: {
+  		    src: ['vendor/jquery/jquery.js', 'js/goods.js'],
+  		    dest: 'js/src/goods.js',
+  		  },
+  		  
+  		},
+
+  		uglify: {
+  		  homepage: {
+  		    files: {
+  		    	'js/dist/homepage.min.js': ['js/src/homepage.js'],
+  		    }
+  		  },
+  		  work: {
+  		    files: {
+  		    	'js/dist/work.min.js': ['js/src/work.js'],
+  		    }
+  		  },
+
+  		  series: {
+  		    files: {
+  		    	'js/dist/series.min.js': ['js/src/series.js'],
+  		    }
+  		  },
+
+  		  mobile: {
+  		  	files: {
+  		  		'js/dist/mobile.min.js': ['js/src/mobile.js']
+  		  	}
+  		  }
+  		},
+
 		// Require config
 		requirejs : {
 			production : {
@@ -142,6 +191,8 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-requirejs');
 	grunt.loadNpmTasks('grunt-contrib-imagemin');
 	grunt.loadNpmTasks('grunt-svgmin');
+	grunt.loadNpmTasks('grunt-contrib-concat');
+	grunt.loadNpmTasks('grunt-contrib-uglify');
 
 	// Run bower install
 	grunt.registerTask('bower-install', function() {

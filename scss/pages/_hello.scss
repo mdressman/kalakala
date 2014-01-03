@@ -1,0 +1,43 @@
+#hello {
+	.gform_title {
+		display: none;
+	}
+}
+.socialLinks {
+	font-size: 1.5rem;
+	a {
+		color: darken($grey, 20%);
+		&:hover {
+			color: $orange;
+		}
+	}
+}
+
+.gform_body, .gform_footer {
+	max-width: 400px;
+	margin: 0 auto;
+	ul {
+		list-style: none;
+		margin: 0; 
+		padding: 0;
+	}
+}
+
+.gform_footer {
+	@extend %center;
+	.gform_button {
+		display: inline-block;
+		width: auto;
+		background: none;
+		border-color: $orange;
+		@extend %upcase;
+		color: $orange;
+		
+		letter-spacing: .25rem;
+		padding-top: 3px;
+		&:hover {
+			background: $orange;
+			color: white;
+		}
+	}
+}

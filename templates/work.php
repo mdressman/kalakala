@@ -27,7 +27,7 @@ get_header(); ?>
 
 	?>
 
-	  	<div class="swiper-slide work-slide" style="background: url(<?php echo $image[0]; ?>); ">
+	  	<div class="swiper-slide work-slide" style="background: url(<?php echo $image[0]; ?>) repeat-y; background-size: 100% auto; ">
 			<div class="series-wrapper">
 				<?php get_template_part('templates/content', 'series'); 	?>			  
 			</div>
@@ -36,10 +36,10 @@ get_header(); ?>
 	<?php endwhile; endif; ?>	  
 		
     </div><!--  end swiper-wrapper -->
-    <div class="slide-direction-nav">
-    	 <a class="previous" href="#"><i class="fa fa-chevron-circle-left"></i></a> 
-    	 <a class="next" href="#"><i class="fa fa-chevron-circle-right"></i></a>
-    </div>
+    
+    <a class="previous nextPrevIcon" href="#"><div class="relative"><i class=""></i></div></a> 
+    <a class="next nextPrevIcon" href="#"><div class="relative"><i class=""></i></div></a>
+   
 </div> <!-- end swiper-container -->
 
 <?php get_footer(); ?>

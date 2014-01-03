@@ -1,11 +1,33 @@
 .page-work {
 	
 	.series-wrapper {
-		position: absolute;
-		bottom: 56px;
-		width: inherit;
-		padding: 20px;
+		padding: 1rem;
+		@include media(tablet) {
+			position: absolute;
+			z-index: 99999;
+			bottom: 56px;
+			width: inherit;
+			padding: 20px;
+		}
+		@include media(tallscreen) {
+			bottom: 0;
+		}
+		@include media(desktop) {
+			opacity: 0;
+		}
 	}
+	.work-slide .series-wrapper {
+		@include transition (all .5s ease-in-out);
+	}
+	.work-slide:hover {
+		@include media(desktop) {
+			.series-wrapper {
+				opacity: 1;
+			}
+		}
+	}
+
+
 
 	.series {
 		background: rgba(255, 255, 255, 0.94);
@@ -14,8 +36,15 @@
 	}
 
 	h2.series-title {
-		font-size: 4em;
+		font-size: 5rem;
+		@extend %upcase;
+		line-height: 1;
 		margin: 0; padding: 0;
-		font-weight: 600;
+		font-weight: 700;
+		color: $darkgrey;
 	}
+}
+
+.work-slide {
+	cursor: pointer;
 }
