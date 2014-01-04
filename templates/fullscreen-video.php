@@ -30,7 +30,10 @@ get_header(); ?>
 	    		<span class="circle"></span>
 	    	</div>
 
+
+
 	    </div>
+	    <a id="soundControl" class="muted" href="#">VOLUME</a>
 	
 <?php endif; ?>
 

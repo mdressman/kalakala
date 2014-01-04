@@ -3,9 +3,15 @@
 	img {
 		max-width: 100%;
 		height: auto;
+		width: 100%;
 	}
 }
 
 .js #big-video-wrap {
 	opacity: 0;
+}
+
+#soundControl {
+	position: absolute;
+	z-index: 9999;
 }

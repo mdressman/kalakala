@@ -26412,10 +26412,7 @@ jQuery(document).ready(function($) {
 				});
                 //console.log(BV.getPlayer());
                 
-                
-            }
-            
-            
+            }            
 
             function adjustImagePositioning() {
                 $bigImage.each(function(){
@@ -26452,14 +26449,26 @@ jQuery(document).ready(function($) {
 
             }
 
+			// $('body').on('click', function() {
+				
+			// 	var video = BV.getPlayer();
 
-			$('body').on('click', function() {
-				//BV.getPlayer().pause();
-				var video = BV.getPlayer();
-				if(!video.paused()) {
-					video.pause();
-				} else {
-					video.play();
-				}
-			});
+			// 	if(!video.paused()) {
+			// 		video.pause();
+			// 	} else {
+			// 		video.play();
+			// 	}
+			// });
+
+            $('#soundControl').on('click', function() {
+                event.preventDefault();
+                var video = BV.getPlayer();
+                if ($(this).hasClass('muted')) {
+                    video.volume(1);
+                    $(this).removeClass('muted');
+                } else {
+                    video.volume(0);
+                    $(this).addClass('muted');
+                }
+            });
 });

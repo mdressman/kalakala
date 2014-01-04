@@ -11,14 +11,29 @@ function loadActiveVideo() {
 	});
 }
 
+function setActiveVideo(selection) {
+	$('.project.active').removeClass('active');
+	$(selection).addClass('active');
+	window.history.pushState(selection, selection, selection);
+	
+}
+
 jQuery(document).ready(function($) {
+
+	if (!window.location.hash) {
+		window.location = window.location + '#' + $('.project.active').attr('id');
+	} else {
+		setActiveVideo('#' + window.location.hash.substr(1));
+	}
+
 	loadActiveVideo();
+	
+
+	
 
 	$('.series__Navigation a').click(function(e) {
 		e.preventDefault();
-		$('.project.active').removeClass('active');
-		var newSeries = $(this).attr('href');
-		$(newSeries).addClass('active');
+		setActiveVideo($(this).attr('href'));
 		$('#playArea .placeholder, .playButton, .fluid-width-video-wrapper').remove();
 		loadActiveVideo();
 	});

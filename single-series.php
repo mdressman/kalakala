@@ -49,7 +49,7 @@
 
 	    	if ($c == 1) { $active = 'active';} else {$active = '';}
 	        setup_postdata($post); ?>
-	        <div id="project<?php echo $c; ?>" class="project <?php echo $active; ?>" data-large="<?php echo $thumbnail_large[0];  ?>" data-small="<?php echo $thumbnail_small[0];  ?>" data-video="<iframe src='//player.vimeo.com/video/<?php the_field('vimeo_id'); ?>?autoplay=1' width='900' height='506' frameborder='0' webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>">
+	        <div id="<?php echo $post->post_name; ?>" class="project <?php echo $active; ?>" data-large="<?php echo $thumbnail_large[0];  ?>" data-small="<?php echo $thumbnail_small[0];  ?>" data-video="<iframe src='//player.vimeo.com/video/<?php the_field('vimeo_id'); ?>?autoplay=1' width='900' height='506' frameborder='0' webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>">
 	            <h2><?php the_title(); ?></h2>
 	            
 	            <?php // the_field('project_image'); ?>
@@ -83,7 +83,7 @@
 	    	$post = $post_object;
 
 	    	$thumbnail_small =  get_post_meta($post->ID, 'thumbnail_small'); ?>
-	    	<a href="#project<?php echo $c; ?>"><img src="<?php echo $thumbnail_small[0];?>" alt="<?php the_title(); ?>"/></a>
+	    	<a href="#<?php echo $post->post_name; ?>"><img src="<?php echo $thumbnail_small[0];?>" alt="<?php the_title(); ?>"/></a>
 	    	<?php 
 	    	wp_reset_postdata();
 	    endwhile; 
