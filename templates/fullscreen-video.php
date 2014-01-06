@@ -33,7 +33,7 @@ get_header(); ?>
 
 
 	    </div>
-	    <a id="soundControl" class="muted" href="#">VOLUME</a>
+	    <a id="soundControl" class="icon-volume-off" href="#"></a>
 	
 <?php endif; ?>
 

@@ -26463,12 +26463,15 @@ jQuery(document).ready(function($) {
             $('#soundControl').on('click', function() {
                 event.preventDefault();
                 var video = BV.getPlayer();
-                if ($(this).hasClass('muted')) {
+                if ($(this).hasClass('icon-volume-off')) {
                     video.volume(1);
-                    $(this).removeClass('muted');
+                    $(this).removeClass('icon-volume-off');
+                    $(this).addClass('icon-volume-up');
                 } else {
                     video.volume(0);
-                    $(this).addClass('muted');
+                    $(this).removeClass('icon-volume-up');
+                    $(this).addClass('icon-volume-off');
+
                 }
             });
 });
