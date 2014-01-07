@@ -91,13 +91,21 @@ function setActiveVideo(selection) {
 	$('.project.active').removeClass('active');
 	$(selection).addClass('active');
 	window.history.pushState(selection, selection, selection);
-	
+	setShareUrls();
+}
+
+function setShareUrls() {
+	$("#share-fb").attr('href', $('.project.active').attr('share-fb'));
+	$("#share-twitter").attr('href', $('.project.active').attr('share-twitter'));
+	$("#share-tumblr").attr('href', $('.project.active').attr('share-tumblr'));
+	$("#share-email").attr('href', $('.project.active').attr('share-email'));
 }
 
 jQuery(document).ready(function($) {
 
 	if (!window.location.hash) {
-		window.location = window.location + '#' + $('.project.active').attr('id');
+		window.history.pushState($('.project.active').attr('id'), $('.project.active').attr('id'), '#' + $('.project.active').attr('id'));
+		setShareUrls();
 	} else {
 		setActiveVideo('#' + window.location.hash.substr(1));
 	}
@@ -112,6 +120,11 @@ jQuery(document).ready(function($) {
 		setActiveVideo($(this).attr('href'));
 		$('#playArea .placeholder, .playButton, .fluid-width-video-wrapper').remove();
 		loadActiveVideo();
+	});
+
+	$('.pop').click(function() {
+		window.open($(this).attr('href'),'t','toolbar=0,resizable=1,status=0,width=640,height=528');
+			return false;
 	});
 });
 	

@@ -48,8 +48,23 @@
 	    	
 
 	    	if ($c == 1) { $active = 'active';} else {$active = '';}
-	        setup_postdata($post); ?>
-	        <div id="<?php echo $post->post_name; ?>" class="project <?php echo $active; ?>" data-large="<?php echo $thumbnail_large[0];  ?>" data-small="<?php echo $thumbnail_small[0];  ?>" data-video="<iframe src='//player.vimeo.com/video/<?php the_field('vimeo_id'); ?>?autoplay=1' width='900' height='506' frameborder='0' webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>">
+	        setup_postdata($post); 
+
+	        $share_url = 'http://' . $_SERVER[HTTP_HOST] . $_SERVER[REQUEST_URI] . '#' . $post->post_name;
+	        ?>
+
+
+
+	        <div id="<?php echo $post->post_name; ?>" 
+	        	 class="project <?php echo $active; ?>" 
+	        	 data-large="<?php echo $thumbnail_large[0];  ?>" 
+	        	 data-small="<?php echo $thumbnail_small[0];  ?>" 
+	        	 data-video="<iframe src='//player.vimeo.com/video/<?php the_field('vimeo_id'); ?>?autoplay=1' width='900' height='506' frameborder='0' webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>"
+	        	 share-fb="http://www.facebook.com/sharer/sharer.php?s=100&p[url]=<?php echo urlencode($share_url); ?>&p[title]=<?php echo get_the_title(); ?>&p[images][0]=<?php echo $thumbnail_large[0]; ?>&p[summary]=<?php echo strip_tags(get_field('description')); ?>"
+	        	 share-twitter="http://www.twitter.com/share?text=<?php echo get_the_title(); ?>&url=<?php echo urlencode($share_url); ?>&via=twitter"
+	        	 share-tumblr="http://www.tumblr.com/share/link?url=<?php echo urlencode($share_url); ?>&name=<?php echo get_the_title(); ?>&description=<?php echo strip_tags(get_field('description')); ?>"
+	        	 share-email="mailto:?subject=<?php echo get_the_title(); ?>&body=<?php echo $share_url; ?>">
+
 	            <h2><?php the_title(); ?></h2>
 	            
 	            <?php // the_field('project_image'); ?>
