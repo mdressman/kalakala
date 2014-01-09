@@ -505,12 +505,12 @@ table {
 /* Colors */
 /* Font Sizes */
 @media only screen and (min-width: 43.75em) {
-  .titleContainer, .series__Navigation a, .tumblr_photo_post img, .tumblr_photo_post .tumblr_caption, .ib {
+  .titleContainer, .series__Navigation a, .tumblr_photo_post img, .tumblr_photo_post .tumblr_caption, .tumblr_photo_post .tumblr-title, .tumblr_title, #pickings .tumblr_caption > p, #periscope .tumblr_link_post > a, .ib {
     display: inline-block;
     vertical-align: middle;
     font-size: 0;
   }
-  .titleContainer a, .series__Navigation a a, .tumblr_photo_post img a, .tumblr_photo_post .tumblr_caption a, .ib a {
+  .titleContainer a, .series__Navigation a a, .tumblr_photo_post img a, .tumblr_photo_post .tumblr_caption a, .tumblr_photo_post .tumblr-title a, .tumblr_title a, #pickings .tumblr_caption > p a, #periscope .tumblr_link_post > a a, .ib a {
     font-size: 1rem;
   }
 }
@@ -531,7 +531,7 @@ table {
   }
 }
 
-.playButton, .nextPrevIcon i, form input, form textarea, #menu-primary, #menu-primary a, .series .project.active, .tumblr_title, #pickings .tumblr_caption > p, #periscope .tumblr_link_post > a {
+.playButton, .nextPrevIcon i, form input, form textarea, #menu-primary, #menu-primary a, .series .project.active {
   display: block;
 }
 
@@ -1722,7 +1722,7 @@ img {
   width: 212px;
   margin-right: 2rem;
 }
-.tumblr_photo_post .tumblr_caption {
+.tumblr_photo_post .tumblr_caption, .tumblr_photo_post .tumblr-title {
   width: 350px;
 }
 

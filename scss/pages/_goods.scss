@@ -42,7 +42,7 @@
 		@extend %ib;
 		margin-right: 2rem;
 	}
-	.tumblr_caption {
+	.tumblr_caption, .tumblr-title {
 		@extend %ib;
 		width: 350px;
 	}
@@ -68,7 +68,7 @@
 
 
 %titleStyle {
-	@extend %bl;
+	@extend %ib;
 	font-size: 2rem;
 	line-height: 2.5rem;
 	margin-bottom: 1rem;

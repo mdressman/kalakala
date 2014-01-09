@@ -12,7 +12,7 @@ if( $test_url !== false ) { // test if the URL exists
 
     function load_external_jQuery() { // load external file  
         wp_deregister_script( 'jquery' ); // deregisters the default WordPress jQuery  
-        if(is_page('hello')):
+        if(is_page('hello') || is_page('the-goods')):
         	wp_register_script('jquery', 'http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js', false, 02012014, false); // register the external file  
         else:
         	wp_register_script('jquery', 'http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js', false, 02012014, true); // register the external file  
@@ -59,6 +59,8 @@ function theme_enqueue_scripts(){
 		wp_enqueue_script('home');
 	elseif(is_page('work')):
 		wp_enqueue_script('work');
+	// elseif(is_page('the-goods')):
+	// 	wp_enqueue_script('goods');
 	elseif ( 'series' == get_post_type() ) :
 		wp_enqueue_script('series');
 	else: 
