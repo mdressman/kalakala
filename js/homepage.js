@@ -55,12 +55,9 @@ jQuery(document).ready(function($) {
 				});
                 //console.log(BV.getPlayer());
                 
-            }      
+            }   
 
-            // $('#big-video-vid').on('click', function() {
-            //     window.location= window.location + '/work';
-            //     return false;
-            // });
+            
 
 
             // function adjustImagePositioning() {

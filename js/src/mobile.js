@@ -768,11 +768,16 @@ $header = $('#page-header');
 $shareButtons = $('.shareButtons');
 $shareContainer = $('.shareContainer');
 $('#mobileMenuToggle').on('click', function(e) {
-	$header.toggleClass('active');
+	$header.toggleClass('active');	
+	$(this).toggleClass('active');
 });
 $('.shareToggle').on('click', function(e) {
 	e.preventDefault();
 	$shareButtons.toggleClass('active');
+});
+$('.home .big-image').on('click', function() {
+    window.location= window.location + '/work';
+    return false;
 });
 var previousScroll = 0;
 if(isMobile === true) {

@@ -26,9 +26,11 @@ function setShareUrls() {
 }
 
 jQuery(document).ready(function($) {
-
+	if (window.location.hash) {
+		window.scrollTo(0,0);
+	}
 	if (!window.location.hash) {
-		window.history.pushState($('.project.active').attr('id'), $('.project.active').attr('id'), '#' + $('.project.active').attr('id'));
+		//window.history.pushState($('.project.active').attr('id'), $('.project.active').attr('id'), '#' + $('.project.active').attr('id'));
 		setShareUrls();
 	} else {
 		setActiveVideo('#' + window.location.hash.substr(1));

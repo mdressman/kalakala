@@ -85,8 +85,9 @@
 	color: $darkgrey;
 	opacity: 0.91;
 	@extend %ab;
-	top: 0;
-	height: 100%;
+	top: 50%;
+	margin-top: -50px;
+	height: 100px;
 	width: 100px;
 	z-index: 9;
 	.relative {

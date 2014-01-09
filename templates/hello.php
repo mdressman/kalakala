@@ -20,12 +20,12 @@ get_header(); ?>
 	    				</h1>
 	    			</div>
 	    			<?php the_content(); ?>
-	    			<div class="socialLinks">
+	    			<!-- <div class="socialLinks">
 	    				<a href="mailto:<?php the_field('email_link');?>?subject=Message from Kalakala Co. Website."><span class="icon-envelope"></span></a>
 	    				<a target="_blank" href="<?php the_field('facebook_link');?>"><span class="icon-facebook"></span></a>
 	    				<a target="_blank" href="<?php the_field('tumblr_link');?>"><span class="icon-tumblr"></span></a>
 	    				<a target="_blank" href="<?php the_field('twitter_link');?>"><span class="icon-twitter"></span></a>
-	    			</div>
+	    			</div> -->
 	    			<?php the_field('contact_form'); ?>
 	    		</div>
 

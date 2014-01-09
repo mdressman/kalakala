@@ -70,7 +70,7 @@
 	            <?php // the_field('project_image'); ?>
 	            <?php //the_field('sub_title'); ?>
 	            <div class="project__Description"><?php the_field('description'); ?></div>
-	            <p><b>Category: </b><?php the_field('project_category'); ?></p>
+	            <p><b>Category: </b><?php $cat = get_field('project_category'); $catOb = get_category($c); echo $catOb->name; ?></p>
 	            <p><b>Year: </b><?php the_field('year'); ?></p>
 	            <p><b>Client: </b><?php the_field('client'); ?></p>
 	            <div class="collaborators"><b>Collaborators: </b><?php linkRepeaterField( 'collaborator', 'link', 'name', 'the_collaborators' ); ?></div>

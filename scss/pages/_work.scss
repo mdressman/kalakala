@@ -17,10 +17,14 @@
 		}
 	}
 	.work-slide .series-wrapper {
-		@include transition (all .5s ease-in-out);
+		@include transition (all .25s ease-in-out);
+	}
+	.work-slide {
+		//@include transition (all .125s ease-in-out);
 	}
 	.work-slide:hover {
-		background-size: 105% !important;
+		//background-size: 100.25% !important;
+		//background-position: center center;
 		@include media(desktop) {
 
 			.series-wrapper {

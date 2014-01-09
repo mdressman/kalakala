@@ -31,13 +31,13 @@
 
 
 %float-right {
-	@include media(desktop) {
+	@include media(tablet) {
 		float: right;
 	}
 	
 }
 %float-left {
-	@include media(desktop) {
+	@include media(tablet) {
 		float: left;
 	}
 }
@@ -279,7 +279,7 @@
 
 .icon-big {
 	font-size: 300%;
-	@include media(tablet) {
+	@include media(desktop) {
 		font-size: 700%;
 	}
 	
@@ -291,7 +291,7 @@
 		@extend %hv-center;
 		color: $grey;
 		letter-spacing: .125rem;
-		@include media(tablet){
+		@include media(desktop){
 			bottom: auto;
 			top: 80px;
 			height: 84px;
@@ -325,8 +325,11 @@
 			top: -1em;
 		}
 
-		@include media(mobile) {
-			top: -75px;
+		
+
+		@include media(notDesktop) {
+			
+			top: -90px;
 			left: 1rem;
 			right: auto;
 			&.nextPost {
@@ -334,6 +337,12 @@
 				right: 1rem;
 			}
 		}
+
+		@include media(mobile) {
+			top: -75px;
+			
+		}
+
 
 	}
 }
@@ -350,6 +359,10 @@
   width: 100%;
   //border-radius: 5rem;
   text-align: center;
+  display: none;
+  @include media(tablet) {
+  	display: block;
+  }
 }
 
 .circle{
@@ -491,4 +504,11 @@ form {
 	&.active {
 		max-height: 999999em;
 	}
+}
+
+
+
+%rotate90 {
+	@include transform-origin(center center);
+	@include transform(rotate(90deg));
 }

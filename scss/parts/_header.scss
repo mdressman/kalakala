@@ -140,7 +140,7 @@
 }
 
 #mobileMenuToggle {
-	@include position(absolute, 2rem 1rem 0 0);
+	@include position(absolute, 1em 2em 0 0);
 	font-size: 200%;
 	@include transition (opacity .35s ease);
 	&:hover {
@@ -149,5 +149,9 @@
 
 	@include media(desktop) {
 		display: none;
+	}
+
+	&.active span {
+		@extend %rotate90;
 	}
 }

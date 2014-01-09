@@ -1,14 +1,18 @@
 jQuery(document).ready(function($) {
 	
 	// PAGE: WORKS
-	windowHeight = $(window).height() - 104;
-	$('.swiper-container').css('height', windowHeight, 'important');
+	var windowWidth = $(window).width();
+	var windowHeight = $(window).height() - 104;
+	$('.swiper-container').css('height', windowHeight);
 	var slides = 3;
 	if(isMobile === true) {
 		slides = 1;
 	}
 
 	
+	if(windowWidth > 1500) {
+		slides = 5;
+	}
 
     var workSwiper = new Swiper('.swiper-loop',{
 	    slidesPerView: slides,
