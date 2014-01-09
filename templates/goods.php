@@ -26,11 +26,18 @@ Template Name: The Goods
 				);
 			} else if (tumblr_api_read['posts'][0]['type'] == 'regular') {
 				var bodyContent = tumblr_api_read['posts'][0]['regular-body'];
+				var firstParagraph = $(bodyContent).find('p').first().text();
 				var firstImage = $(bodyContent).find('img:first').attr('src');
 				var postImageSrc = '';
+				var postParagraph = '';
 				if (firstImage){
 					postImageSrc = '<a href="' + tumblr_api_read['posts'][0]['url'] + '"><img class="tumblr_photo" src="' + firstImage + '" /></a>';
 				}
+
+				if (firstParagraph) {
+					postParagraph = '<p>'+ firstParagraph + '</p>';
+				}
+
 				document.write(
 					'<ol class="tumblr_posts"><li class="tumblr_post tumblr_photo_post">' +
 					postImageSrc +	
