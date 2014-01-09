@@ -8,6 +8,8 @@ jQuery(document).ready(function($) {
 		slides = 1;
 	}
 
+	
+
     var workSwiper = new Swiper('.swiper-loop',{
 	    slidesPerView: slides,
 	    loop: true

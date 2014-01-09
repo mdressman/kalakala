@@ -104,6 +104,10 @@ module.exports = function(grunt) {
   		    src: ['vendor/jquery/jquery.js', 'js/goods.js'],
   		    dest: 'js/src/goods.js',
   		  },
+  		  backstory: {
+  		    src: ['vendor/jquery/jquery.js', 'vendor/fitvids/jquery.fitvids.js', 'js/dist/mobile.min.js', 'js/backstory.js'],
+  		    dest: 'js/src/backstory.js',
+  		  },
   		  
   		},
 
@@ -129,7 +133,14 @@ module.exports = function(grunt) {
   		  	files: {
   		  		'js/dist/mobile.min.js': ['js/src/mobile.js']
   		  	}
+  		  },
+
+  		  backstory: {
+  		  	files: {
+  		  		'js/dist/backstory.min.js': ['js/src/backstory.js']
+  		  	}
   		  }
+
   		},
 
 		// Require config
