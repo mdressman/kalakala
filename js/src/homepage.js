@@ -26409,6 +26409,7 @@ jQuery(document).ready(function($) {
 					$('#big-video-wrap').animate({
 						opacity: 1
 					}, 500);
+                    $('.screen img').hide();
 				});
                 //console.log(BV.getPlayer());
                 
