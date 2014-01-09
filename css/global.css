@@ -1581,6 +1581,9 @@ img {
   -moz-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
 }
+.page-work .work-slide:hover {
+  background-size: 105% !important;
+}
 @media only screen and (min-width: 71.25em) {
   .page-work .work-slide:hover .series-wrapper {
     opacity: 1;

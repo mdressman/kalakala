@@ -20,7 +20,9 @@
 		@include transition (all .5s ease-in-out);
 	}
 	.work-slide:hover {
+		background-size: 105% !important;
 		@include media(desktop) {
+
 			.series-wrapper {
 				opacity: 1;
 			}
@@ -44,6 +46,9 @@
 		color: $darkgrey;
 	}
 }
+
+
+
 
 .work-slide {
 	cursor: pointer;

@@ -26811,10 +26811,10 @@ jQuery(document).ready(function($) {
                 
             }      
 
-            $('#big-video-vid').on('click', function() {
-                window.location= window.location + '/work';
-                return false;
-            });
+            // $('#big-video-vid').on('click', function() {
+            //     window.location= window.location + '/work';
+            //     return false;
+            // });
 
 
             // function adjustImagePositioning() {
