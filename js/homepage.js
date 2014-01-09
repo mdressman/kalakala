@@ -1,6 +1,25 @@
 jQuery(document).ready(function($) {
 
+            var wWidth, wHeight;
+            sizeVideo();
+            function sizeVideo() {
+                wWidth = $(window).width();
+                wHeight = $(window).height();
+                console.log(wWidth+' x '+wHeight);
+                var videoHeight = wHeight - 100;
+                var styles = {
+                    height : videoHeight
+                };
+                $('#big-video-wrap').css(styles);
 
+            }
+            $( window ).resize(function() {
+                sizeVideo();
+            });
+
+            $('#videoBG img').hide();
+            var placeholder = $('#videoBG img').attr('src');
+            $.backstretch(placeholder);
 			// Use Modernizr to detect for touch devices, 
             // which don't support autoplay and may have less bandwidth, 
             // so just give them the poster images instead
@@ -36,42 +55,48 @@ jQuery(document).ready(function($) {
 				});
                 //console.log(BV.getPlayer());
                 
-            }            
+            }      
 
-            function adjustImagePositioning() {
-                $bigImage.each(function(){
-                    var $img = $(this),
-                        img = new Image();
+            $('#big-video-vid').on('click', function() {
+                window.location= window.location + '/work';
+                return false;
+            });
 
-                    img.src = $img.attr('src');
 
-                    var windowWidth = $window.width(),
-                        windowHeight = $window.height(),
-                        r_w = windowHeight / windowWidth,
-                        i_w = img.width,
-                        i_h = img.height,
-                        r_i = i_h / i_w,
-                        new_w, new_h, new_left, new_top;
+            // function adjustImagePositioning() {
+            //     $bigImage.each(function(){
+            //         var $img = $(this),
+            //             img = new Image();
 
-                    if( r_w > r_i ) {
-                        new_h   = windowHeight;
-                        new_w   = windowHeight / r_i;
-                    }
-                    else {
-                        new_h   = windowWidth * r_i;
-                        new_w   = windowWidth;
-                    }
+            //         img.src = $img.attr('src');
 
-                    $img.css({
-                        width   : new_w,
-                        height  : new_h,
-                        left    : ( windowWidth - new_w ) / 2,
-                        top     : ( windowHeight - new_h ) / 2
-                    });
+            //         var windowWidth = $window.width(),
+            //             windowHeight = $window.height(),
+            //             r_w = windowHeight / windowWidth,
+            //             i_w = img.width,
+            //             i_h = img.height,
+            //             r_i = i_h / i_w,
+            //             new_w, new_h, new_left, new_top;
 
-                });
+            //         if( r_w > r_i ) {
+            //             new_h   = windowHeight;
+            //             new_w   = windowHeight / r_i;
+            //         }
+            //         else {
+            //             new_h   = windowWidth * r_i;
+            //             new_w   = windowWidth;
+            //         }
 
-            }
+            //         $img.css({
+            //             width   : new_w,
+            //             height  : new_h,
+            //             left    : ( windowWidth - new_w ) / 2,
+            //             top     : ( windowHeight - new_h ) / 2
+            //         });
+
+            //     });
+
+            // }
 
 			// $('body').on('click', function() {
 				

@@ -89,11 +89,11 @@ module.exports = function(grunt) {
   		    dest: 'js/src/mobile.js',
   		  },
   		  homepage: {
-  		    src: ['vendor/jquery/jquery.js', 'vendor/jquery-ui/ui/jquery-ui.js', 'vendor/video.js/video.js', 'vendor/BigVideo.js/lib/bigvideo.js','js/src/prefixfree.js', 'js/src/mobile.js', 'js/homepage.js'],
+  		    src: ['vendor/jquery/jquery.js', 'vendor/jquery-ui/ui/jquery-ui.js', 'vendor/video.js/video.js', 'vendor/BigVideo.js/lib/bigvideo.js','js/src/prefixfree.js',  'vendor/jquery-backstretch/jquery.backstretch.js', 'js/src/mobile.js', 'js/homepage.js'],
   		    dest: 'js/src/homepage.js',
   		  },
   		  work: {
-  		    src: ['vendor/fitvids/jquery.fitvids.js', 'vendor/swiper/dist/idangerous.swiper-2.4.js', 'js/src/approach.js', 'js/dist/mobile.min.js', 'js/work.js'],
+  		    src: ['vendor/fitvids/jquery.fitvids.js', 'vendor/jquery-backstretch/jquery.backstretch.js', 'vendor/swiper/dist/idangerous.swiper-2.4.js', 'js/src/approach.js', 'js/dist/mobile.min.js', 'js/work.js'],
   		    dest: 'js/src/work.js',
   		  },
   		  series: {
