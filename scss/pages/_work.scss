@@ -1,7 +1,8 @@
 .page-work {
 	
 	.series-wrapper {
-		padding: 1rem;
+		
+		@include rem('padding', 13px);
 		@include media(tablet) {
 			position: absolute;
 			z-index: 99999;
@@ -42,7 +43,14 @@
 	}
 
 	h2.series-title {
-		font-size: 5rem;
+		@include rem('font-size', 20px);
+		@include media(tablet) {
+			@include rem('font-size', 40px);
+		}
+		@include media(desktop) {
+			@include rem('font-size', 60px);
+		}
+		
 		@extend %upcase;
 		line-height: 1;
 		margin: 0; padding: 0;

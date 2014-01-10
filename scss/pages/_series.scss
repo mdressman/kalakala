@@ -17,15 +17,15 @@
 	@extend %cf;
 	margin: 0 auto;
 	background: rgba($black, .85);
-	margin-top: 3rem;
-	padding-bottom: 1.5rem;
+	@include rem('margin-top', $baseline-px * 3);
+	@include rem('padding-bottom', $baseline-px * 1.5)
+	
 
 
 }
 .series {
 	@extend %cf;
-	padding: 1em;
-	padding: 1.5rem;
+	@include rem('padding', $baseline-px * 1.5);
 
 
 	
@@ -39,7 +39,8 @@
 			@extend %bl;
 			@extend %float-left;
 			background: white;
-			padding: 2.5rem;
+			@include rem('padding', $baseline-px * 2.5);
+
 			@include media(tablet) {
 				width: 50%;
 			}
@@ -53,10 +54,13 @@
 		}
 		h2 {
 			border-bottom: 2px solid $black;
-			padding-bottom: .75rem;
+			@include rem('padding-bototm', $baseline-px * .75);
+
 		}
 		p {
 			margin: .25rem 0 0 0;
+			@include rem('margin', $baseline-px/4 0 0 0);
+
 		}
 		p.collaborators p {
 			display: inline;
@@ -88,7 +92,8 @@
 .backToMainMenu {
 	@extend %ab;
 	color: $brown;
-	top: -2rem;
+	@include rem('top', -($baseline-px * 2));
+
 	&:hover {
 		color: $orange;
 	}
@@ -131,7 +136,8 @@
 		@extend %center;
 		@extend %upcase;
 		color: $yellow;
-		letter-spacing: .125rem;
+		@include rem('letter-spacing', $baseline-px * .125);
+
 		font-weight: 100;
 
 	}

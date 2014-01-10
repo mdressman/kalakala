@@ -1,5 +1,7 @@
 #goods {
-	padding-bottom: 5rem;
+	
+	@include rem('padding-bottom', $baseline-px * 5);
+
 }
 .tumblrBlog {
 	border-bottom: 1.5px solid $black;
@@ -11,14 +13,18 @@
 		border-top: 1.5px solid $black;
 	}
 	&:last-child {
-		margin-bottom: 4rem;
+		
+		@include rem('margin-bottom', $baseline-px * 4);
+
 	}
 	ol {
 		margin: 0;
 		padding: 0;
 		list-style: none;
 	}
-	padding: 3rem 0;
+
+	@include rem('padding', $baseline-px * 3 0);
+
 
 	
 }
@@ -40,7 +46,7 @@
 	img {
 		width: 212px;
 		@extend %ib;
-		margin-right: 2rem;
+		@include rem('margin-right', $baseline-px * 2);
 	}
 	.tumblr_caption, .tumblr-title {
 		@extend %ib;
@@ -53,8 +59,9 @@
 	width: 212px;
 	
 	@include media(tablet) {
-		
-		margin: 0 2rem;
+
+		@include rem('margin', 0 $baseline-px * 2);
+
 	}
 }
 
@@ -69,9 +76,11 @@
 
 %titleStyle {
 	@extend %ib;
-	font-size: 2rem;
-	line-height: 2.5rem;
-	margin-bottom: 1rem;
+	@include rem('font-size', $baseline-px * 2);
+	@include rem('line-height', $baseline-px * 2.5);
+	@include rem('margin-bottom', $baseline-px);
+
+
 	font-weight: bold;
 	max-width: 350px;
 }
@@ -87,7 +96,7 @@
 		@extend %titleStyle;
 		a {
 			display: block;
-			font-size: 1rem;
+			@include rem('font-size', $baseline-px);
 			line-height: 1.5;
 		}
 	}
@@ -105,7 +114,7 @@
 		color: $black;
 		font-family: "alternate-gothic-no-1-d";
 		font-weight: 100;
-		letter-spacing: .125rem;
+		@include rem('letter-spacing', $baseline-px * .125);
 		&:hover {
 			color: $orange;
 		}

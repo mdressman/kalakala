@@ -1,5 +1,6 @@
+$baseline-px: 13px;
+$pixelBase: 13;
 @import '../vendor/normalize-scss/normalize', 'bourbon/bourbon', 'mixins','icons','variables','patterns';
-
 
 *, *:before, *:after {
 	@include box-sizing(border-box);
@@ -18,7 +19,7 @@ html {
 }
 
 body {
-	font-size: 1rem;
+	@include rem('font-size', 13px);
 	height: inherit;
 	line-height: 1.6rem;
 	

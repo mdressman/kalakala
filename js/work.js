@@ -16,6 +16,8 @@ jQuery(document).ready(function($) {
 
     var workSwiper = new Swiper('.swiper-loop',{
 	    slidesPerView: slides,
+	    keyboardControl: true,
+	    mousewheelControl: true,
 	    loop: true
 	  });
     $('.previous').click(function(e){

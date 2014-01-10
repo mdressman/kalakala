@@ -10,7 +10,7 @@
 		padding: 1rem;
 		@extend %twoColumn;
 		@include media(tablet) {
-			margin: 1.5rem;
+			@include rem('margin', $baseline-px * 1.5);
 			padding: 30px;
 		}
 	}
@@ -29,13 +29,14 @@
 	}
 	.portrait {
 		@include media(bigMobile) {
-			margin-right: 5rem;
-			margin-bottom: 2rem;
+			@include rem('margin-right', $baseline-px * 5);
+			@include rem('margin-bottom', $baseline-px * 2);
+
 		}
 	}
 	.bio {
 		text-align: left;
-		margin: 1rem 0 2rem;
+		@include rem('margin', $baseline-px 0 $baseline-px * 2);
 		@include media(bigMobile) {
 			width: 50%;
 			margin: 0;

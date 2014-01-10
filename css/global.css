@@ -673,6 +673,10 @@ table {
   padding-bottom: 3rem;
 }
 
+.page-work #content-wrap {
+  padding-bottom: 0;
+}
+
 .page__Container {
   max-width: 900px;
   margin: 0 auto;
@@ -1007,6 +1011,7 @@ html {
 }
 
 body {
+  font-size: 13px;
   font-size: 1rem;
   height: inherit;
   line-height: 1.6rem;
@@ -1510,16 +1515,19 @@ img {
 .series__Container {
   margin: 0 auto;
   background: rgba(35, 31, 32, 0.85);
+  margin-top: 39px;
   margin-top: 3rem;
+  padding-bottom: 19.5px;
   padding-bottom: 1.5rem;
 }
 
 .series {
-  padding: 1em;
+  padding: 19.5px;
   padding: 1.5rem;
 }
 .series .project.active {
   background: white;
+  padding: 32.5px;
   padding: 2.5rem;
 }
 @media only screen and (min-width: 43.75em) {
@@ -1540,10 +1548,13 @@ img {
 }
 .series .project h2 {
   border-bottom: 2px solid #231f20;
-  padding-bottom: .75rem;
+  padding-bototm: 9.75px;
+  padding-bototm: 0.75rem;
 }
 .series .project p {
   margin: .25rem 0 0 0;
+  margin: 3.25px 0 0 0;
+  margin:  0.25rem 0 0 0;
 }
 .series .project p.collaborators p {
   display: inline;
@@ -1564,6 +1575,7 @@ img {
 
 .backToMainMenu {
   color: #9d958c;
+  top: -26px;
   top: -2rem;
 }
 .backToMainMenu:hover {
@@ -1599,7 +1611,8 @@ img {
 }
 .series__Navigation h3 {
   color: #fff1cd;
-  letter-spacing: .125rem;
+  letter-spacing: 1.625px;
+  letter-spacing: 0.125rem;
   font-weight: 100;
 }
 .series__Navigation a {
@@ -1622,6 +1635,7 @@ img {
 }
 
 .page-work .series-wrapper {
+  padding: 13px;
   padding: 1rem;
 }
 @media only screen and (min-width: 43.75em) {
@@ -1659,12 +1673,25 @@ img {
   padding: 28px 20px 16px 20px;
 }
 .page-work h2.series-title {
-  font-size: 5rem;
+  font-size: 20px;
+  font-size: 1.53846rem;
   line-height: 1;
   margin: 0;
   padding: 0;
   font-weight: 700;
   color: #231f20;
+}
+@media only screen and (min-width: 43.75em) {
+  .page-work h2.series-title {
+    font-size: 40px;
+    font-size: 3.07692rem;
+  }
+}
+@media only screen and (min-width: 71.25em) {
+  .page-work h2.series-title {
+    font-size: 60px;
+    font-size: 4.61538rem;
+  }
 }
 
 .work-slide {
@@ -1680,6 +1707,7 @@ img {
 }
 @media only screen and (min-width: 43.75em) {
   .page-backstory .textBlock {
+    margin: 19.5px;
     margin: 1.5rem;
     padding: 30px;
   }
@@ -1693,13 +1721,16 @@ img {
 }
 @media only screen and (min-width: 37.5em) {
   #team .portrait {
+    margin-right: 65px;
     margin-right: 5rem;
+    margin-bottom: 26px;
     margin-bottom: 2rem;
   }
 }
 #team .bio {
   text-align: left;
-  margin: 1rem 0 2rem;
+  margin: 13px 0 26px;
+  margin:  1rem 0 2rem;
 }
 @media only screen and (min-width: 37.5em) {
   #team .bio {
@@ -1718,6 +1749,7 @@ img {
 }
 
 .socialLinks {
+  font-size: 19.5px;
   font-size: 1.5rem;
 }
 .socialLinks a {
@@ -1743,7 +1775,8 @@ img {
   background: none;
   border-color: #d36327;
   color: #d36327;
-  letter-spacing: .25rem;
+  letter-space: 3.25px;
+  letter-space: 0.25rem;
   padding-top: 3px;
 }
 .gform_footer .gform_button:hover {
@@ -1752,6 +1785,7 @@ img {
 }
 
 #goods {
+  padding-bottom: 65px;
   padding-bottom: 5rem;
 }
 
@@ -1760,12 +1794,14 @@ img {
   text-align: left;
   max-width: 920px;
   margin: 0 auto;
-  padding: 3rem 0;
+  padding: 39px 0;
+  padding:  3rem 0;
 }
 .tumblrBlog.alpha {
   border-top: 1.5px solid #231f20;
 }
 .tumblrBlog:last-child {
+  margin-bottom: 52px;
   margin-bottom: 4rem;
 }
 .tumblrBlog ol {
@@ -1787,6 +1823,7 @@ img {
 
 .tumblr_photo_post img {
   width: 212px;
+  margin-right: 26px;
   margin-right: 2rem;
 }
 .tumblr_photo_post .tumblr_caption, .tumblr_photo_post .tumblr-title {
@@ -1798,7 +1835,8 @@ img {
 }
 @media only screen and (min-width: 43.75em) {
   .logoColumn {
-    margin: 0 2rem;
+    margin: 0 26px;
+    margin:  0 2rem;
   }
 }
 
@@ -1812,8 +1850,11 @@ img {
 }
 
 .tumblr_title, #pickings .tumblr_caption > p, #periscope .tumblr_link_post > a {
+  font-size: 26px;
   font-size: 2rem;
+  line-height: 32.5px;
   line-height: 2.5rem;
+  margin-bottom: 13px;
   margin-bottom: 1rem;
   font-weight: bold;
   max-width: 350px;
@@ -1828,6 +1869,7 @@ img {
 }
 #pickings .tumblr_caption > p a {
   display: block;
+  font-size: 13px;
   font-size: 1rem;
   line-height: 1.5;
 }
@@ -1844,7 +1886,8 @@ img {
   color: #231f20;
   font-family: "alternate-gothic-no-1-d";
   font-weight: 100;
-  letter-spacing: .125rem;
+  letter-spacing: 1.625px;
+  letter-spacing: 0.125rem;
 }
 #periscope .tumblr_link_post > a:hover {
   color: #d36327;

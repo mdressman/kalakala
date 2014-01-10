@@ -4,7 +4,8 @@
 	}
 }
 .socialLinks {
-	font-size: 1.5rem;
+	@include rem('font-size', $baseline-px * 1.5);
+
 	a {
 		color: darken($grey, 20%);
 		&:hover {
@@ -33,7 +34,9 @@
 		@extend %upcase;
 		color: $orange;
 		
-		letter-spacing: .25rem;
+
+		@include rem('letter-space', $baseline-px/4);
+
 		padding-top: 3px;
 		&:hover {
 			background: $orange;
