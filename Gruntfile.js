@@ -1,5 +1,13 @@
 module.exports = function(grunt) {
-
+	var mobileFiles = ['vendor/fastclick/lib/fastclick.js', 'js/mobile.js']
+	,	homepageFiles = ['vendor/jquery/jquery.js', 'vendor/jquery-ui/ui/jquery-ui.js', 'vendor/video.js/video.js', 'vendor/BigVideo.js/lib/bigvideo.js','js/src/prefixfree.js',  'vendor/jquery-backstretch/jquery.backstretch.js', 'js/src/mobile.js', 'js/homepage.js']
+	,	workFiles = ['vendor/fitvids/jquery.fitvids.js', 'vendor/jquery-backstretch/jquery.backstretch.js', 'vendor/swiper/dist/idangerous.swiper-2.4.js', 'js/src/approach.js', 'js/dist/mobile.min.js', 'js/work.js']
+	,	seriesFiles = ['vendor/fitvids/jquery.fitvids.js', 'js/dist/mobile.min.js', 'js/series.js']
+	,	goodsFiles = ['vendor/jquery/jquery.js', 'js/goods.js']
+	,	backstoryFiles = ['vendor/jquery/jquery.js', 'vendor/fitvids/jquery.fitvids.js', 'js/dist/mobile.min.js', 'js/backstory.js']
+	;	
+  		  	  
+  		  	 
 	grunt.initConfig({
 
 		// Watches for changes and runs tasks
@@ -13,11 +21,42 @@ module.exports = function(grunt) {
 			},
 			js : {
 				files : ['js/*.js'],
-				tasks : ['jshint','concat', 'uglify'],
+				tasks : ['jshint'],
 				options : {
 					livereload : true
 				}
 			},
+
+			mobile: {
+  		    	files : mobileFiles,
+  		    	tasks : ['jshint', 'concat:mobile', 'uglify:mobile']
+  		  	},
+
+  		  	homepage: {
+  		  	  	files : homepageFiles,
+  		    	tasks : ['jshint', 'concat:homepage', 'uglify:homepage']
+  		  	},
+
+  		  	work: {
+  		  	 	files : workFiles,
+  		    	tasks : ['jshint', 'concat:work', 'uglify:work']
+  		  	},
+
+  		  	series: {
+  		  	  	files : seriesFiles,
+  		    	tasks : ['jshint', 'concat:series', 'uglify:series']
+  		  	},
+
+  		  	goods: {
+  		  	  	files : goodsFiles,
+  		    	tasks : ['jshint', 'concat:goods', 'uglify:goods']
+  		  	},
+
+  		  	backstory: {
+	  		  	files : backstoryFiles,
+  		    	tasks : ['jshint', 'concat:backstory', 'uglify:backstory']
+  		  	},
+
 			php : {
 				files : ['**/*.php'],
 				options : {
@@ -85,27 +124,27 @@ module.exports = function(grunt) {
 
 		concat: {
   		  mobile: {
-  		    src: ['vendor/fastclick/lib/fastclick.js', 'js/mobile.js'],
+  		    src: mobileFiles,
   		    dest: 'js/src/mobile.js',
   		  },
   		  homepage: {
-  		    src: ['vendor/jquery/jquery.js', 'vendor/jquery-ui/ui/jquery-ui.js', 'vendor/video.js/video.js', 'vendor/BigVideo.js/lib/bigvideo.js','js/src/prefixfree.js',  'vendor/jquery-backstretch/jquery.backstretch.js', 'js/src/mobile.js', 'js/homepage.js'],
+  		    src: homepageFiles,
   		    dest: 'js/src/homepage.js',
   		  },
   		  work: {
-  		    src: ['vendor/fitvids/jquery.fitvids.js', 'vendor/jquery-backstretch/jquery.backstretch.js', 'vendor/swiper/dist/idangerous.swiper-2.4.js', 'js/src/approach.js', 'js/dist/mobile.min.js', 'js/work.js'],
+  		    src: workFiles,
   		    dest: 'js/src/work.js',
   		  },
   		  series: {
-  		    src: ['vendor/fitvids/jquery.fitvids.js', 'js/dist/mobile.min.js', 'js/series.js'],
+  		    src: seriesFiles,
   		    dest: 'js/src/series.js',
   		  },
   		  goods: {
-  		    src: ['vendor/jquery/jquery.js', 'js/goods.js'],
+  		    src: goodsFiles,
   		    dest: 'js/src/goods.js',
   		  },
   		  backstory: {
-  		    src: ['vendor/jquery/jquery.js', 'vendor/fitvids/jquery.fitvids.js', 'js/dist/mobile.min.js', 'js/backstory.js'],
+  		    src: backstoryFiles,
   		    dest: 'js/src/backstory.js',
   		  },
   		  
@@ -114,19 +153,25 @@ module.exports = function(grunt) {
   		uglify: {
   		  homepage: {
   		    files: {
-  		    	'js/dist/homepage.min.js': ['js/src/homepage.js'],
+  		    	'js/dist/homepage.min.js': ['js/src/homepage.js']
   		    }
   		  },
   		  work: {
   		    files: {
-  		    	'js/dist/work.min.js': ['js/src/work.js'],
+  		    	'js/dist/work.min.js': ['js/src/work.js']
   		    }
   		  },
 
   		  series: {
   		    files: {
-  		    	'js/dist/series.min.js': ['js/src/series.js'],
+  		    	'js/dist/series.min.js': ['js/src/series.js']
   		    }
+  		  },
+
+  		  goods: {
+  		  	files: {
+  		  		'js/dist/goods.min.js': ['js/src/goods.js']
+  		  	}
   		  },
 
   		  mobile: {
