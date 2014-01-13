@@ -21,6 +21,9 @@
 		margin: 0;
 		padding: 0;
 		list-style: none;
+		@include media(mobile) {
+			width: 100%;
+		}
 	}
 
 	@include rem('padding', $baseline-px * 3 0);
@@ -47,10 +50,18 @@
 		width: 212px;
 		@extend %ib;
 		@include rem('margin-right', $baseline-px * 2);
+		@include media(mobile) {
+			width: 100%;
+			margin-right: 0;
+		}
 	}
 	.tumblr_caption, .tumblr-title {
 		@extend %ib;
 		width: 350px;
+		@include media(mobile) {
+			width: 100%;
+			margin-right: 0;
+		}
 	}
 
 }
@@ -63,11 +74,15 @@
 		@include rem('margin', 0 $baseline-px * 2);
 
 	}
+	@include media(mobile) {
+		width: 100%;
+	}
 }
 
 .b_logo {
 	@include media(mobile) {
 		display: block;
+		margin: 0 auto;
 	}
 	background: url(tumblrBlogLogos.png) no-repeat;
 	
