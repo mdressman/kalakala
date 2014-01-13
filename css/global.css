@@ -1662,6 +1662,10 @@ img {
   -moz-transition: all 0.25s ease-in-out;
   transition: all 0.25s ease-in-out;
 }
+.page-work .work-slide img {
+  width: 100%;
+  height: auto;
+}
 @media only screen and (min-width: 71.25em) {
   .page-work .work-slide:hover .series-wrapper {
     opacity: 1;
