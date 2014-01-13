@@ -1813,6 +1813,11 @@ img {
   padding: 0;
   list-style: none;
 }
+@media only screen and (max-width: 43.6875em) {
+  .tumblrBlog ol {
+    width: 100%;
+  }
+}
 
 .tumblr_posts, .b_logo, .logoColumn {
   display: inline-block;
@@ -1830,8 +1835,20 @@ img {
   margin-right: 26px;
   margin-right: 2rem;
 }
+@media only screen and (max-width: 43.6875em) {
+  .tumblr_photo_post img {
+    width: 100%;
+    margin-right: 0;
+  }
+}
 .tumblr_photo_post .tumblr_caption, .tumblr_photo_post .tumblr-title {
   width: 350px;
+}
+@media only screen and (max-width: 43.6875em) {
+  .tumblr_photo_post .tumblr_caption, .tumblr_photo_post .tumblr-title {
+    width: 100%;
+    margin-right: 0;
+  }
 }
 
 .logoColumn {
@@ -1843,6 +1860,11 @@ img {
     margin:  0 2rem;
   }
 }
+@media only screen and (max-width: 43.6875em) {
+  .logoColumn {
+    width: 100%;
+  }
+}
 
 .b_logo {
   background: url(tumblrBlogLogos.png) no-repeat;
@@ -1850,6 +1872,7 @@ img {
 @media only screen and (max-width: 43.6875em) {
   .b_logo {
     display: block;
+    margin: 0 auto;
   }
 }
 
