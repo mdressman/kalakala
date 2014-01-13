@@ -3308,6 +3308,9 @@ jQuery(document).ready(function($) {
 	     return false;
 	});
 
-	
+	var slideImgHeight = $('.work-slide img').height();
+	if(windowHeight > slideImgHeight) {
+		$('.series-wrapper').css('bottom', windowHeight - slideImgHeight);
+	}
 
 });

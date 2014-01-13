@@ -26,8 +26,9 @@ get_header(); ?>
 		$image = wp_get_attachment_image_src( $attachment_id, $size ); 
 
 	?>
-
-	  	<div class="swiper-slide work-slide" style="background: url(<?php echo $image[0]; ?>) no-repeat; background-size: 100% auto; ">
+		
+	  	<div class="swiper-slide work-slide"> <!-- style="background: url(<?php echo $image[0]; ?>) no-repeat; background-size: 100% auto;" -->
+			<img src="<?php echo $image[0]; ?>" />
 			<div class="series-wrapper">
 				<?php get_template_part('templates/content', 'series'); 	?>			  
 			</div>
