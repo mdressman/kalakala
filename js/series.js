@@ -48,6 +48,7 @@ jQuery(document).ready(function($) {
 		setActiveVideo($(this).attr('href'));
 		$('#playArea .placeholder, .playButton, .fluid-width-video-wrapper').remove();
 		loadActiveVideo();
+		window.scrollTo(0,0);
 	});
 
 	$('.pop').click(function() {
