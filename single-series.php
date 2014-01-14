@@ -45,6 +45,9 @@
 	    	//var_dump($post);
 	    	
 	    	$thumbnail_large =  get_post_meta($post->ID, 'thumbnail_large');
+	    	if(!$thumbnail_large[0]) {
+	    		$thumbnail_large[0] = get_template_directory_uri() .'/css/kalakala_placeholder.jpg';
+	    	}
 	    	
 
 	    	if ($c == 1) { $active = 'active';} else {$active = '';}
@@ -97,7 +100,11 @@
 	    	$post_object = get_sub_field('projekt');
 	    	$post = $post_object;
 
-	    	$thumbnail_small =  get_post_meta($post->ID, 'thumbnail_small'); ?>
+	    	$thumbnail_small =  get_post_meta($post->ID, 'thumbnail_small'); 
+			if(!$thumbnail_small[0]) {
+	    		$thumbnail_small[0] = get_template_directory_uri() .'/css/kalakala_thumb_placeholder.jpg';
+	    	}
+	    	?>
 	    	<a href="#<?php echo $post->post_name; ?>"><img src="<?php echo $thumbnail_small[0];?>" alt="<?php the_title(); ?>"/></a>
 	    	<?php 
 	    	wp_reset_postdata();

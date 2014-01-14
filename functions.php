@@ -94,6 +94,18 @@ function theme_enqueue_scripts(){
 	
 }
 
+/// Help IE be a better Browser
+function add_ie_html5_shim () {
+    echo '<!--[if lt IE 9]>';
+    echo '<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>';
+    echo '<script src="http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE9.js"></script>';
+    echo '<script src="http://cdnjs.cloudflare.com/ajax/libs/respond.js/1.3.0/respond.js"></script>';
+    echo '<![endif]-->';
+}
+add_action('wp_head', 'add_ie_html5_shim');
+
+
+
 
 // ADD DATA ATTRIBUTE TO ENQUEUE SCRIPT
 add_filter('clean_url','requirejs_script',10,2);
