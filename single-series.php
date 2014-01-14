@@ -72,12 +72,24 @@
 	            
 	            <?php // the_field('project_image'); ?>
 	            <?php //the_field('sub_title'); ?>
-	            <div class="project__Description"><?php the_field('description'); ?></div>
-	            <p><b>Category: </b><?php $cat = get_field('project_category'); $catOb = get_category($cat[0]); echo $catOb->name; ?></p>
-	            <p><b>Year: </b><?php the_field('year'); ?></p>
-	            <p><b>Client: </b><?php the_field('client'); ?></p>
-	            <div class="collaborators"><b>Collaborators: </b><?php linkRepeaterField( 'collaborator', 'link', 'name', 'the_collaborators' ); ?></div>
-	            <p><b>Press: </b><?php the_field('press'); ?></p>
+	            <?php if(get_field('description')): ?>
+	            	<div class="project__Description"><?php the_field('description'); ?></div>
+	            <?php endif; ?>
+	            <?php if(get_field('project_category')): ?>
+	            	<p><b>Category: </b><?php $cat = get_field('project_category'); $catOb = get_category($cat[0]); echo $catOb->name; ?></p>
+	            <?php endif; ?>
+	            <?php if(get_field('year')): ?>
+	            	<p><b>Year: </b><?php the_field('year'); ?></p>
+	            <?php endif; ?>
+	            <?php if(get_field('client')): ?>
+	            	<p><b>Client: </b><?php the_field('client'); ?></p>
+	            <?php endif; ?>
+	            <?php if(get_field('collaborator')): ?>
+	            	<div class="collaborators"><b>Collaborators: </b><?php linkRepeaterField( 'collaborator', 'link', 'name', 'the_collaborators' ); ?></div>
+	            <?php endif; ?>
+	            <?php if(get_field('press')): ?>
+	            	<p><b>Press: </b><?php the_field('press'); ?></p>
+	            <?php endif; ?>
 	        </div>
 	        <?php 
 	        
