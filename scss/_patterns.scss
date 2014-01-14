@@ -428,7 +428,8 @@ margin:0 .25rem;
 
 
 form {
-	padding: 3rem 0;
+	
+	@include rem('padding', 0 0 24px);
 	text-align: left;
 	input, textarea {
 		@extend %bl;

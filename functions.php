@@ -214,3 +214,9 @@ function post_remove ()      //creating functions post_remove for removing menu 
 add_action('admin_menu', 'post_remove');   //adding action for triggering function call
 
 
+function kalakala_add_favicon(){ 
+    echo '<link rel="shortcut icon" href="'.get_stylesheet_directory_uri().'/favicon.png"/>';
+    
+}
+add_action('wp_head','kalakala_add_favicon');
+
