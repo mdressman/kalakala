@@ -1157,8 +1157,17 @@ img {
   background-size: 100% auto;
   background-repeat: no-repeat;
 }
+@media only screen and (min-width: 43.75em) {
+  .logo {
+    width: 135px;
+    height: 60px;
+    margin-bottom: 30px;
+  }
+}
 @media only screen and (min-width: 71.25em) {
   .logo {
+    margin-top: 8px;
+    margin-top: 0.61538rem;
     position: absolute;
     left: 50%;
     margin-left: -85px;

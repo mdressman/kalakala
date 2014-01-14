@@ -128,11 +128,12 @@
 	background-size: 100% auto;
   	background-repeat: no-repeat;
   	@include media(tablet) {
-  		//width: 161px;
-		//height: 70px;
-		//margin-bottom: 30px;
+  		width: 135px;
+		height: 60px;
+		margin-bottom: 30px;
   	}
 	@include media(desktop) {
+		@include rem('margin-top', 8px);
 		@include ab-h-center(-85px);
 		
 		
