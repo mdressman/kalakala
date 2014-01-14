@@ -6,11 +6,12 @@
 		position: absolute;
 		z-index: 99999;
 		top: 0;
+		width: inherit;
+		padding: 20px;
 		@include media(tablet) {
 			top: auto;
 			bottom: 56px;
-			width: inherit;
-			padding: 20px;
+			
 		}
 		@include media(tallscreen) {
 			bottom: 0;
@@ -66,7 +67,29 @@
 	}
 }
 
+.pagination {
+	@extend %fix;
+	@extend %center;
+	bottom: 0;
+	z-index: 9999999999;
+	background: $black;
+	left: 0;
+	right: 0;
+	
 
+}
+.swiper-pagination-switch {
+	width: 5px;
+	height: 5px;
+	border-radius: 10px;
+	background: $yellow;
+	display: inline-block;
+	margin: 0 5px;
+}
+
+.swiper-active-switch {
+	background: $orange;
+}
 
 
 .work-slide {

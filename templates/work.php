@@ -37,10 +37,12 @@ get_header(); ?>
 	<?php endwhile; endif; ?>	  
 		
     </div><!--  end swiper-wrapper -->
-    
+    <?php if(!is_mobile()): ?>
     <a class="previous nextPrevIcon" href="#"><div class="relative"><i class=""></i></div></a> 
     <a class="next nextPrevIcon" href="#"><div class="relative"><i class=""></i></div></a>
-   
+    <?php else: ?>
+    	<div class="pagination"></div>
+    <?php endif; ?>
 </div> <!-- end swiper-container -->
 
 <?php get_footer(); ?>

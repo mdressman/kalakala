@@ -555,7 +555,7 @@ table {
   text-decoration: none;
 }
 
-.page__Title, .titleContainer, .section__Title, .insetBorder, #menu-social-nav, .series__Navigation h3, .series__Navigation a, .gform_footer, .logoColumn {
+.page__Title, .titleContainer, .section__Title, .insetBorder, #menu-social-nav, .series__Navigation h3, .series__Navigation a, .pagination, .gform_footer, .logoColumn {
   text-align: center;
 }
 
@@ -569,6 +569,10 @@ table {
 
 .playButton, .singlePost__Nav a, .previous, .next, .previous .relative i, .next .relative i, #playArea .video, .backToMainMenu {
   position: absolute;
+}
+
+.pagination {
+  position: fixed;
 }
 
 .playButton, .singlePost__Nav a, .previous .relative i, .next .relative i {
@@ -1649,13 +1653,13 @@ img {
   position: absolute;
   z-index: 99999;
   top: 0;
+  width: inherit;
+  padding: 20px;
 }
 @media only screen and (min-width: 43.75em) {
   .page-work .series-wrapper {
     top: auto;
     bottom: 56px;
-    width: inherit;
-    padding: 20px;
   }
 }
 @media only screen and (min-height: 43.75em) and (min-width: 62.5em) {
@@ -1707,6 +1711,27 @@ img {
     font-size: 60px;
     font-size: 4.61538rem;
   }
+}
+
+.pagination {
+  bottom: 0;
+  z-index: 9999999999;
+  background: #231f20;
+  left: 0;
+  right: 0;
+}
+
+.swiper-pagination-switch {
+  width: 5px;
+  height: 5px;
+  border-radius: 10px;
+  background: #fff1cd;
+  display: inline-block;
+  margin: 0 5px;
+}
+
+.swiper-active-switch {
+  background: #d36327;
 }
 
 .work-slide {

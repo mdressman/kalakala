@@ -3277,8 +3277,12 @@ jQuery(document).ready(function($) {
 	}
 	
 	var slides = 3;
+	var pagination = '';
+	var createPagination = false;
 	if(isMobile === true) {
 		slides = 1;
+		pagination = '.pagination';
+		createPagination = true;
 	}
 
 	
@@ -3290,8 +3294,12 @@ jQuery(document).ready(function($) {
 	    slidesPerView: slides,
 	    keyboardControl: true,
 	    mousewheelControl: true,
-	    loop: true
-	  });
+	    loop: true,
+	    pagination: pagination,
+	    paginationClickable: true,
+	    createPagination: createPagination
+	});
+
     $('.previous').click(function(e){
 			e.preventDefault();
 			workSwiper.swipePrev();
