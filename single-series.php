@@ -92,7 +92,7 @@
 	    <h3>Other Videos In Series</h3>
 	    <?php
 	    $c = 0;
-	    while(has_sub_field('projekts')): // variable must be called $post (IMPORTANT) ?			>
+	    while(has_sub_field('projekts')): 
 	    	$c++;
 	    	$post_object = get_sub_field('projekt');
 	    	$post = $post_object;
@@ -110,10 +110,7 @@
 
 	    
 	    <?php wp_reset_postdata(); ?>
-	   	<script type="text/javascript">
-			var projectData = <?php echo json_encode($projectData); ?>;
-			console.log(projectData);
-		</script>
+	   	
 	<?php endif; ?>
 
 	</div>

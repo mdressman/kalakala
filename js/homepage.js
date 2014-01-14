@@ -55,7 +55,11 @@ jQuery(document).ready(function($) {
 				});
                 //console.log(BV.getPlayer());
                 
-            }   
+            }
+
+
+            
+            
 
             
 

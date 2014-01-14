@@ -29,10 +29,13 @@ jQuery(document).ready(function($) {
 			workSwiper.swipeNext();
 	});
 
-    
-	$(".nextPrevIcon i").approach({
-		"opacity": 1
-	}, 200);
+
+    if(!isMobile) {
+		$(".nextPrevIcon i").approach({
+			"opacity": 1
+		}, 200);
+    }
+	
 	
 	$nav = $('.nextPrevIcon.previous');
 	

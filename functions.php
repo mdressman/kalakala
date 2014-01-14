@@ -50,11 +50,17 @@ function theme_enqueue_scripts(){
 	wp_register_script('require', get_bloginfo('template_url') . '/vendor/requirejs/require.js', array(), false, true);
 	wp_register_script('mobile', get_bloginfo('template_url') . '/js/dist/mobile.min.js', array(), false, true);
 
-	wp_register_script('home', get_bloginfo('template_url') . '/js/dist/homepage.min.js', array(), false, true);
-	wp_register_script('work', get_bloginfo('template_url') . '/js/dist/work.min.js', array(), false, true);
-	wp_register_script('series', get_bloginfo('template_url') . '/js/dist/series.min.js', array(), false, true);
-	wp_register_script('goods', get_bloginfo('template_url') . '/js/dist/goods.min.js', array(), false, true);
-	wp_register_script('backstory', get_bloginfo('template_url') . '/js/dist/backstory.min.js', array(), false, true);
+	//wp_register_script('home', get_bloginfo('template_url') . '/js/dist/homepage.min.js', array(), false, true);
+	//wp_register_script('work', get_bloginfo('template_url') . '/js/dist/work.min.js', array(), false, true);
+	//wp_register_script('series', get_bloginfo('template_url') . '/js/dist/series.min.js', array(), false, true);
+	//wp_register_script('goods', get_bloginfo('template_url') . '/js/dist/goods.min.js', array(), false, true);
+	//wp_register_script('backstory', get_bloginfo('template_url') . '/js/dist/backstory.min.js', array(), false, true);
+
+	wp_register_script('home', get_bloginfo('template_url') . '/js/src/homepage.js', array(), false, true);
+	wp_register_script('work', get_bloginfo('template_url') . '/js/src/work.js', array(), false, true);
+	wp_register_script('series', get_bloginfo('template_url') . '/js/src/series.js', array(), false, true);
+	wp_register_script('goods', get_bloginfo('template_url') . '/js/src/goods.js', array(), false, true);
+	wp_register_script('backstory', get_bloginfo('template_url') . '/js/src/backstory.js', array(), false, true);
 
 	if(is_front_page() && !is_mobile()):
 		wp_enqueue_script('home');
@@ -64,7 +70,7 @@ function theme_enqueue_scripts(){
 	// 	wp_enqueue_script('goods');
 	elseif(is_page('backstory')):
 		wp_enqueue_script('backstory');
-	elseif ( 'series' == get_post_type() ) :
+	elseif ( 'series' == get_post_type() || is_single() ) :
 		wp_enqueue_script('series');
 	else: 
 		wp_enqueue_script('mobile');

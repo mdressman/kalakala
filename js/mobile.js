@@ -31,3 +31,11 @@ $(window).scroll(function(){
 	previousScroll = currentScroll;
 });
 }
+
+if($('body').hasClass('home'))   {
+	$bgImage = $('.big-image');
+	$src = $bgImage.attr('src');
+	$bgImage.hide();
+	$.backstretch($('.big-image').attr('src'));
+	console.log('mobile backstretch');
+}

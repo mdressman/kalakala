@@ -25,6 +25,8 @@ function setShareUrls() {
 	$("#share-email").attr('href', $('.project.active').attr('share-email'));
 }
 
+
+jQuery(function($){ $('#singleProjectVideo').fitVids(); });
 jQuery(document).ready(function($) {
 	if (window.location.hash) {
 		window.scrollTo(0,0);
