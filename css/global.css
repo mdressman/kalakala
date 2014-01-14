@@ -563,7 +563,7 @@ table {
   text-transform: uppercase;
 }
 
-.page__Container, .singlePost__Nav a i, #page-header, #menu-primary, #menu-social-nav .icon-envelope, .series__Container, #playArea, .videoContainer, .relative {
+.page__Container, .singlePost__Nav a i, #page-header, #menu-primary, #menu-social-nav .icon-envelope, .series__Container, #playArea, .work-slide, .videoContainer, .relative {
   position: relative;
 }
 
@@ -1157,13 +1157,6 @@ img {
   background-size: 100% auto;
   background-repeat: no-repeat;
 }
-@media only screen and (min-width: 43.75em) {
-  .logo {
-    width: 161px;
-    height: 70px;
-    margin-bottom: 30px;
-  }
-}
 @media only screen and (min-width: 71.25em) {
   .logo {
     position: absolute;
@@ -1715,6 +1708,10 @@ img {
     font-size: 60px;
     font-size: 4.61538rem;
   }
+}
+
+.work-swiper {
+  max-height: 847px !important;
 }
 
 .pagination {

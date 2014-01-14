@@ -67,6 +67,11 @@
 	}
 }
 
+
+.work-swiper {
+	max-height: 847px !important;
+}
+
 .pagination {
 	@extend %fix;
 	@extend %center;
@@ -94,4 +99,5 @@
 
 .work-slide {
 	cursor: pointer;
+	@extend %rel;
 }
