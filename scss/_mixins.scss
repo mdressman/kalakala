@@ -50,9 +50,9 @@
 
 
 
-  @if $type == tablet_horizontal {
+  @if $type == tabletHorizontal {
 
-      @media only screen and (min-height:em(600)) and (min-width:em(900))  {
+      @media only screen and (min-width:em(900))  {
           @content;
       }
 

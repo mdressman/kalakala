@@ -3,6 +3,9 @@
 Template Name: Full Screen Video
 */
 
+if(is_mobile()) {
+	wp_redirect( site_url( 'work' ) );
+}
 get_header(); ?>
 <?php if (is_page()): the_post() ?>
 
@@ -24,16 +27,20 @@ get_header(); ?>
 			<div class="screen" id="videoBG" data-video="<?php the_field('video_url'); ?>">
 	        	<img src="<?php echo $fallbackImage[0]; ?>" class="big-image" />
 	    	</div>
-	    	<div class="loading">
-	    		<span class="circle"></span>
-	    		<span class="circle"></span>
-	    		<span class="circle"></span>
-	    	</div>
+	    	<?php if(!is_mobile()): ?>
+	    		<div class="loading">
+	    			<span class="circle"></span>
+	    			<span class="circle"></span>
+	    			<span class="circle"></span>
+	    		</div>
+	    	<?php endif; ?>
 
 
 
 	    </div>
-	    <a id="soundControl" class="icon-volume-off" href="#"></a>
+	    <?php if(!is_mobile()): ?>
+	    	<a id="soundControl" class="icon-volume-off" href="#"></a>
+		<?php endif; ?>
 	
 <?php endif; ?>
 

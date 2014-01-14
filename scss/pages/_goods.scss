@@ -82,7 +82,7 @@
 .b_logo {
 	@include media(mobile) {
 		display: block;
-		margin: 0 auto;
+		@include rem('margin', 0 auto 24px);
 	}
 	background: url(tumblrBlogLogos.png) no-repeat;
 	

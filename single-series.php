@@ -61,7 +61,7 @@
 	        	 data-small="<?php echo $thumbnail_small[0];  ?>" 
 	        	 data-video="<iframe src='//player.vimeo.com/video/<?php the_field('vimeo_id'); ?>?autoplay=1' width='900' height='506' frameborder='0' webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>"
 	        	 share-fb="http://www.facebook.com/sharer/sharer.php?s=100&p[url]=<?php echo urlencode($share_url); ?>&p[title]=<?php echo get_the_title(); ?>&p[images][0]=<?php echo $thumbnail_large[0]; ?>&p[summary]=<?php echo strip_tags(get_field('description')); ?>"
-	        	 share-twitter="http://www.twitter.com/share?text=<?php echo get_the_title(); ?>&url=<?php echo urlencode($share_url); ?>&via=twitter"
+	        	 share-twitter="http://www.twitter.com/share?text=<?php echo get_the_title(); ?>&url=<?php echo urlencode($share_url); ?>&via=<?php the_field('twitter_handle', 'option'); ?>"
 	        	 share-tumblr="http://www.tumblr.com/share/link?url=<?php echo urlencode($share_url); ?>&name=<?php echo get_the_title(); ?>&description=<?php echo strip_tags(get_field('description')); ?>"
 	        	 share-email="mailto:?subject=<?php echo get_the_title(); ?>&body=<?php echo $share_url; ?>">
 
@@ -70,7 +70,7 @@
 	            <?php // the_field('project_image'); ?>
 	            <?php //the_field('sub_title'); ?>
 	            <div class="project__Description"><?php the_field('description'); ?></div>
-	            <p><b>Category: </b><?php $cat = get_field('project_category'); $catOb = get_category($c); echo $catOb->name; ?></p>
+	            <p><b>Category: </b><?php $cat = get_field('project_category'); $catOb = get_category($cat[0]); echo $catOb->name; ?></p>
 	            <p><b>Year: </b><?php the_field('year'); ?></p>
 	            <p><b>Client: </b><?php the_field('client'); ?></p>
 	            <div class="collaborators"><b>Collaborators: </b><?php linkRepeaterField( 'collaborator', 'link', 'name', 'the_collaborators' ); ?></div>

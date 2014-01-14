@@ -48,13 +48,15 @@
 				width: 420px;
 			}
 			@include media(shortscreen) {
-				padding-top: 0;
+				@include rem('padding-top', $baseline-px);
 				width: 50%;
 			}
 		}
 		h2 {
 			border-bottom: 2px solid $black;
-			@include rem('padding-bototm', $baseline-px * .75);
+			line-height: 1.35;
+			margin-top: 0;
+			@include rem('padding-bottom', $baseline-px);
 
 		}
 		p {
@@ -116,7 +118,7 @@
 
 
 	@include media(tablet) {
-		width: 40%;
+		width: 49%;
 		padding-left: 16px;
 	}
 	@include media(desktop) {
@@ -125,7 +127,7 @@
 	}
 
 	@include media(shortscreen) {
-		width: 40%;
+		width: 49%;
 
 	}
 

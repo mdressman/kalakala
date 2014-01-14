@@ -3,9 +3,11 @@
 	.series-wrapper {
 		
 		@include rem('padding', 13px);
+		position: absolute;
+		z-index: 99999;
+		top: 0;
 		@include media(tablet) {
-			position: absolute;
-			z-index: 99999;
+			top: auto;
 			bottom: 56px;
 			width: inherit;
 			padding: 20px;

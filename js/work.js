@@ -3,7 +3,13 @@ jQuery(document).ready(function($) {
 	// PAGE: WORKS
 	var windowWidth = $(window).width();
 	var windowHeight = $(window).height() - 104;
-	$('.swiper-container').css('height', windowHeight);
+	var mobileWindowHeight = $(window).height() - 65;
+	if(!isMobile) {
+		$('.swiper-container').css('height', windowHeight);
+	} else {
+		$('.swiper-container').css('height', mobileWindowHeight);
+	}
+	
 	var slides = 3;
 	if(isMobile === true) {
 		slides = 1;
@@ -45,9 +51,15 @@ jQuery(document).ready(function($) {
 	     return false;
 	});
 
-	var slideImgHeight = $('.work-slide img').height();
-	if(windowHeight > slideImgHeight) {
-		$('.series-wrapper').css('bottom', windowHeight - slideImgHeight);
+
+
+
+	if(!isMobile)  {
+
+		var slideImgHeight = $('.work-slide img').height();
+		if(windowHeight > slideImgHeight) {
+			$('.series-wrapper').css('bottom', windowHeight - slideImgHeight);
+		}
 	}
 
 });

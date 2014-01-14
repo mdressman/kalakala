@@ -1,6 +1,6 @@
 $baseline-px: 13px;
 $pixelBase: 13;
-@import '../vendor/normalize-scss/normalize', 'bourbon/bourbon', 'mixins','icons','variables','patterns';
+@import '../vendor/normalize-scss/normalize', 'bourbon/bourbon', 'variables', 'mixins','icons','patterns';
 
 *, *:before, *:after {
 	@include box-sizing(border-box);

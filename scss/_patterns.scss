@@ -218,6 +218,7 @@
 	letter-spacing: .25rem;
 	margin: 0;
 	padding: 1.5rem 0;
+	line-height: 1.35;
 }
 
 
@@ -336,7 +337,7 @@
 
 		@include media(notDesktop) {
 			
-			top: -90px;
+			top: -110px;
 			left: 1rem;
 			right: auto;
 			&.nextPost {
@@ -346,7 +347,7 @@
 		}
 
 		@include media(mobile) {
-			top: -75px;
+			top: -90px;
 			
 		}
 

@@ -30,9 +30,6 @@
 
 	@include media(mobile) {
 		max-height: 65px;
-		
-		
-		
 	}
 
 	
@@ -54,12 +51,16 @@
 			margin-bottom: 2rem;
 
 		}
-		@include media(desktop) {
+		@include media(tabletHorizontal) {
 			padding-top: 0;
 			position: absolute;
 			top: 30px;
+			left: 0;
+		}
+		@include media(desktop) {
 			left: 60px;
 		}
+
 		li:not(:last-child) {
 			@include media(tablet) {
 				border-right: 1px solid $yellow;
@@ -89,11 +90,12 @@
 #menu-social-nav {
 	
 	@extend %center;
-	@include media(desktop) {
+	@include media(tabletHorizontal) {
 		position: absolute;
 		top: 30px;
 		right: 60px;
 	}
+
 	
 
 	a {
@@ -104,9 +106,7 @@
 			margin-right: .5rem;
 		}
 	}
-	@include media(mobile) {
-		
-	}
+
 	.icon-envelope {
 		font-size: 1.5rem;
 		@extend %rel;
@@ -147,7 +147,7 @@
 		opacity: .75;
 	}
 
-	@include media(desktop) {
+	@include media(tabletHorizontal) {
 		display: none;
 	}
 

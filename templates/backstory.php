@@ -8,8 +8,9 @@ get_header(); ?>
 
 	<?php
 
-	
-	$vimeoID = get_field('backstory_video_id'); 
+	if(get_field('backstory_video_id')):
+		$vimeoID = get_field('backstory_video_id'); 
+	endif;
 
 	$attachment_id = get_field('backstory_video_placeholder');
 	$size = "full"; 
@@ -19,9 +20,11 @@ get_header(); ?>
 	?>
 		<section id="backstory" class="page__Container">
 			<h1 class="page__Title"><?php the_title(); ?></h1>
-			<div class="videoContainer" data-video="<iframe src='//player.vimeo.com/video/<?php echo $vimeoID; ?>?autoplay=1' width='900' height='506' frameborder='0' webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>">
+			<div class="videoContainer" <?php if(get_field('backstory_video_id')): ?> data-video="<iframe src='//player.vimeo.com/video/<?php echo $vimeoID; ?>?autoplay=1' width='900' height='506' frameborder='0' webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>" <?php endif;?>>
 	        	<img src="<?php echo $fallbackImage[0]; ?>" class="big-image" />
-	        	<a href='#' class='playButton'>Play</a>
+	        	<?php if(get_field('backstory_video_id')): ?>
+	        		<a href='#' class='playButton'>Play</a>
+	        	<?php endif; ?>
 	    	</div>
 	    	<div class="textBlock">
 	    		<?php the_field('backstory'); ?>

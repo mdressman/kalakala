@@ -17539,11 +17539,13 @@ $(window).scroll(function(){
 }
 
 if($('body').hasClass('home'))   {
+	var videoURL = $('#videoBG').attr('data-video');
+	
 	$bgImage = $('.big-image');
 	$src = $bgImage.attr('src');
 	$bgImage.hide();
 	$.backstretch($('.big-image').attr('src'));
-	console.log('mobile backstretch');
+	
 }
 jQuery(document).ready(function($) {
 
