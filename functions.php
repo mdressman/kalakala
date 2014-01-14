@@ -90,7 +90,7 @@ function theme_enqueue_scripts(){
 	//wp_localize_script( 'require', 'directory', $WP_DIRECTORY );
 
 	
-	wp_enqueue_script('livereload'); //keep this at the bottom
+	//wp_enqueue_script('livereload'); //keep this at the bottom
 	
 }
 

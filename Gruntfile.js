@@ -1,6 +1,6 @@
 module.exports = function(grunt) {
 	var mobileFiles = ['vendor/fastclick/lib/fastclick.js', 'vendor/jquery-backstretch/jquery.backstretch.js', 'js/mobile.js']
-	,	homepageFiles = ['vendor/jquery-ui/ui/jquery-ui.js', 'vendor/video.js/video.js', 'vendor/BigVideo.js/lib/bigvideo.js','js/src/prefixfree.js',  'vendor/jquery-backstretch/jquery.backstretch.js', 'js/src/mobile.js', 'js/homepage.js']
+	,	homepageFiles = ['vendor/jquery-ui/ui/jquery-ui.js', 'vendor/video.js/video.js', 'vendor/BigVideo.js/lib/bigvideo.js', 'vendor/jquery-backstretch/jquery.backstretch.js', 'js/src/mobile.js', 'js/homepage.js']
 	,	workFiles = ['vendor/fitvids/jquery.fitvids.js','vendor/jquery-backstretch/jquery.backstretch.js', 'vendor/swiper/dist/idangerous.swiper-2.4.js', 'js/src/approach.js', 'js/dist/mobile.min.js', 'js/work.js']
 	,	seriesFiles = ['vendor/fitvids/jquery.fitvids.js', 'js/dist/mobile.min.js', 'js/series.js']
 	,	goodsFiles = ['js/goods.js']
