@@ -949,6 +949,9 @@ form input, form textarea {
     display: none;
   }
 }
+.shareToggle.active {
+  color: #d36327;
+}
 
 .shareButtons {
   max-height: 0;

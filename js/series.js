@@ -1,8 +1,10 @@
 function loadActiveVideo() {
 	$activeVideo = $('.project.active').attr('data-video');
 	$activeProjectImage = $('.project.active').attr('data-large');
-	$('#playArea').append("<img class='placeholder' src="+$activeProjectImage+" /><a href='#' class='playButton'>Play</a>");
-	$('.playButton').on('click', function(e) {
+	$('#playArea').append("<img class='placeholder' src="+$activeProjectImage+" /><a href='#' class='playButton' style='display:none;'>Play</a>");
+	$play = $('.playButton');
+	setTimeout(function() { $play.fadeIn(200); }, 400);
+	$play.on('click', function(e) {
 		e.preventDefault();
 		$('#playArea .placeholder, .playButton').remove();
 		$('#playArea').append($activeVideo);
@@ -28,6 +30,9 @@ function setShareUrls() {
 
 jQuery(function($){ $('#singleProjectVideo').fitVids(); });
 jQuery(document).ready(function($) {
+	$playArea = $('#playArea');
+	
+
 	if (window.location.hash) {
 		window.scrollTo(0,0);
 	}
@@ -37,17 +42,21 @@ jQuery(document).ready(function($) {
 	} else {
 		setActiveVideo('#' + window.location.hash.substr(1));
 	}
-
+	$playArea.css({opacity:0});
 	loadActiveVideo();
+	$playArea.animate({opacity:1}, 300);
+	
 	
 
 	
 
 	$('.series__Navigation a').click(function(e) {
 		e.preventDefault();
+		$playArea.css({opacity:0});
 		setActiveVideo($(this).attr('href'));
 		$('#playArea .placeholder, .playButton, .fluid-width-video-wrapper').remove();
 		loadActiveVideo();
+		$playArea.animate({opacity: 1}, 300);
 		window.scrollTo(0,0);
 	});
 

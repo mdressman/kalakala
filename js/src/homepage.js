@@ -17517,7 +17517,10 @@ $('#mobileMenuToggle').on('click', function(e) {
 });
 $('.shareToggle').on('click', function(e) {
 	e.preventDefault();
+	$toggle = $(this);
+	$toggle.toggleClass('active');
 	$shareButtons.toggleClass('active');
+
 });
 $('.home .big-image').on('click', function() {
     window.location= window.location + '/work';

@@ -461,6 +461,7 @@ form {
 
 
 
+
 .shareContainer {
 	@include media(mobile) {
 		position: fixed;
@@ -479,6 +480,9 @@ form {
 	}
 	@include media(mobile) {
 		display: none;
+	}
+	&.active {
+		color: $orange;
 	}
 }
 .shareButtons {
