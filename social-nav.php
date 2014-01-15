@@ -1,6 +1,6 @@
 <div id="menu-social-nav" class="menu">
 <?php if(get_field('email_link', 'option')): ?>
-	<a href="mailto:<?php the_field('email_link', 'option'); ?>?subject=Email sent from Kalakala.co"><span class="icon-envelope"></span></a>
+	<a href="mailto:<?php the_field('email_link', 'option'); ?>?subject=Email%20sent%20from%20Kalakala.co"><span class="icon-envelope"></span></a>
 <?php endif; ?>	
 
 <?php if(get_field('facebook_link', 'option')): ?>

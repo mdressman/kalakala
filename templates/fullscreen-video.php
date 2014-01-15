@@ -25,7 +25,7 @@ get_header(); ?>
 		<div id="homepageVideoWrapper">
 
 			<div class="screen" id="videoBG" data-video="<?php the_field('video_url'); ?>">
-	        	<img src="<?php echo $fallbackImage[0]; ?>" class="big-image" />
+	        	<img src="<?php echo $fallbackImage[0]; ?>" class="big-image" alt=""/>
 	    	</div>
 	    	<?php if(!is_mobile()): ?>
 	    		<div class="loading">
