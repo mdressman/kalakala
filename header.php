@@ -5,7 +5,6 @@
 <!--[if gt IE 8]><!--><html class="no-js" <?php language_attributes() ?>><!--<![endif]-->
     <head>
         <meta charset="<?php bloginfo( 'charset' ) ?>">
-        <?php header('X-UA-Compatible: IE=edge,chrome=1'); ?>
         <meta name="viewport" content="width=device-width">
         <?php if(is_page('the-goods')): ?>
         	<script type="text/javascript" src="//use.typekit.net/pom2awi.js"></script>
@@ -14,7 +13,7 @@
         	<script type="text/javascript" src="//use.typekit.net/ytw0jtp.js"></script>
 			<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 		<?php endif; ?>
-        <title><?php bloginfo('name'); ?> | <?php is_front_page() ? bloginfo('description') : wp_title('|'); ?></title>
+        <title><?php bloginfo('name'); ?> | <?php is_front_page() ? bloginfo('description') : wp_title(''); ?></title>
 		<!-- <meta name="author" content="">
 		<link rel="author" href=""> -->
 		<?php wp_head() ?>
