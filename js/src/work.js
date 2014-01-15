@@ -3285,7 +3285,7 @@ jQuery(document).ready(function($) {
 	}
 
 	
-	if(windowWidth > 1500) {
+	if(windowWidth > 1700) {
 		slides = 5;
 	}
 
