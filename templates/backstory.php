@@ -42,7 +42,7 @@ get_header(); ?>
 	    				foreach($members as $member):
 	    					$portrait = $member['team_image'];
 	    					$portraitImage = wp_get_attachment_image_src($portrait, 'full');
-	    					echo '<img class="portrait" src="'.$portraitImage[0].'"/>';
+	    					echo '<img class="portrait" src="'.$portraitImage[0].'" alt=""/>';
 	    					echo '<div class="bio">'.$member['team_bio'].'</div>';
 	    				endforeach;
 
