@@ -26,7 +26,7 @@ body {
 }
 
 h1 {
-	font-size: 2.5rem;
+	@include rem('font-size', 24px);
 	@extend %upcase;
 }
 h2 ,h3 {

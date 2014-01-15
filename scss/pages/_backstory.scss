@@ -7,11 +7,11 @@
 	}
 	.textBlock {
 		background: white;
-		padding: 1rem;
-		@extend %twoColumn;
+		@include rem('padding', 15px);
+		@include rem('margin', $baseline-px);
 		@include media(tablet) {
 			@include rem('margin', $baseline-px * 1.5);
-			padding: 30px;
+			@include rem('padding', 60px);
 		}
 	}
 }

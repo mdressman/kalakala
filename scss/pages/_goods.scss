@@ -49,7 +49,7 @@
 	img {
 		width: 212px;
 		@extend %ib;
-		@include rem('margin-right', $baseline-px * 2);
+		@include rem('margin-right', $baseline-px * 3);
 		@include media(mobile) {
 			width: 100%;
 			margin-right: 0;
@@ -94,10 +94,12 @@
 	@include rem('font-size', $baseline-px * 2);
 	@include rem('line-height', $baseline-px * 2.5);
 	@include rem('margin-bottom', $baseline-px);
-
+	@include media(mobile) {
+		@include rem('margin', 14px 0);
+	}
 
 	font-weight: bold;
-	max-width: 350px;
+	max-width: 280px;
 }
 .tumblr_title {
 	@extend %titleStyle;

@@ -216,9 +216,10 @@
 	font-weight: 600;
 	@extend %upcase;
 	letter-spacing: .25rem;
+	@include rem('letter-spacing', 2px);
 	margin: 0;
-	padding: 1.5rem 0;
-	line-height: 1.35;
+	@include rem('padding', 12px 0 10px);
+
 }
 
 
@@ -288,7 +289,7 @@
 .icon-big {
 	font-size: 300%;
 	@include media(desktop) {
-		font-size: 700%;
+		font-size: 650%;
 	}
 	
 }
@@ -299,6 +300,11 @@
 		@extend %hv-center;
 		color: $grey;
 		letter-spacing: .125rem;
+		@include media(tablet) {
+			&:hover {
+				color: $orange;
+			}
+		}
 		@include media(desktop){
 			bottom: auto;
 			top: 80px;
@@ -309,13 +315,13 @@
 				left: auto;
 				margin-right: 32px;
 				margin-right: -6rem;
-				margin-right: -8vw;
+				margin-right: -12vw;
 			}
 			&.prevPost {
 				right: auto;
 				margin-left: 32px;
 				margin-left: -6rem;
-				margin-left: -8vw;
+				margin-left: -12vw;
 				text-align: right;
 			}
 			@include media(desktop) {
@@ -323,31 +329,31 @@
 				bottom: 0;
 			}
 
-			&:hover {
-				color: $orange;
-			}
+			
 		}
 
 		i {
 			@extend %rel;
-			top: -1em;
+			@include rem('top', -$baseline-px);
 		}
 
 		
 
 		@include media(notDesktop) {
 			
-			top: -110px;
-			left: 1rem;
+			top: -75px;
+
+			@include rem('left', $baseline-px);
 			right: auto;
 			&.nextPost {
 				left: auto;
-				right: 1rem;
+		
+				@include rem('right', $baseline-px);
 			}
 		}
 
 		@include media(mobile) {
-			top: -90px;
+			top: -60px;
 			
 		}
 
@@ -438,7 +444,7 @@ form {
 		box-shadow: none;
 		border: 1px solid $brown;
 		width: 100%;
-		margin-bottom: 2rem;
+		@include rem('margin-bottom', 2 * $baseline-px);
 
 	}
 	label {
@@ -447,8 +453,8 @@ form {
 }
 
 .gform_heading {
-	max-width: 400px;
-	margin: 1rem auto;
+	max-width: 300px;
+	@include rem('margin', $baseline-px * 2 auto $baseline-px);
 	text-align: center;
 }
 
@@ -469,15 +475,17 @@ form {
 		bottom: 0;
 		width: 100%;
 		background: $black;
+		z-index: 999;
 	}
 }
 .shareToggle {
-	font-size: 2rem;
+
+	@include rem('font-size', $baseline-px * 1.5);
 	display: inline-block;
 	@include media(tablet) {
 		position: absolute;
-		top: 1rem;
-		right: 1rem;
+		@include rem('top', 11px );
+		@include rem('right', $baseline-px);
 	}
 	@include media(mobile) {
 		display: none;
@@ -489,13 +497,13 @@ form {
 .shareButtons {
 	max-height: 0;
 	overflow: hidden;
-	font-size: 2rem;
+	@include rem('font-size', $baseline-px * 1.5);
 	display: inline-block;
 	@include media(tablet) {
-		width: 2rem;
+		@include rem('width', $baseline-px * 2);
 		position: absolute; 
-		top: 1rem;
-		right: -3rem;
+		@include rem('top', $baseline-px );
+		@include rem('right', -$baseline-px * 3);
 		a {
 			display: block;
 			margin-bottom: .5rem;
@@ -508,8 +516,9 @@ form {
 		width: 100%;
 		a {
 			display: inline-block;
-			margin: 0 1rem;
-			padding: 1rem;
+	
+			@include rem('margin', 0 $baseline-px);
+			@include rem('padding', $baseline-px);
 		}
 	}
 

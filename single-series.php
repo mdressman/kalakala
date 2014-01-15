@@ -17,7 +17,7 @@
 		if (!empty( $next_post )): ?>
   			<a href="<?php echo get_permalink( $next_post->ID ); ?>" class="prevPost">
   				<span class="icon-prev icon-big"></span>
-  				<i>Previous Series</i>
+  				<i>Prev Series</i>
   			</a>
 		<?php endif; ?>
 

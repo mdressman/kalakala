@@ -22,7 +22,7 @@
 		@extend %upcase;
 		@extend %nodec;
 		&:hover {
-			color: white;
+			color: $orange;
 		}
 	}
 	
@@ -68,7 +68,7 @@
 			
 		}
 		li.current-menu-item a {
-			color: $color_link;
+			color: lighten($orange, 20%);
 		}
 		a {
 			font-size: 1rem;
@@ -83,7 +83,7 @@
 	}
 .single-series {
 	#menu-primary li.work-link a {
-		color: $orange;
+		color: lighten($orange, 20%);
 	}
 }
 

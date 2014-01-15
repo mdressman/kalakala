@@ -2,6 +2,10 @@
 	.gform_title {
 		display: none;
 	}
+
+	 p {
+	 	margin: 0;
+	 }
 }
 .socialLinks {
 	@include rem('font-size', $baseline-px * 1.5);
