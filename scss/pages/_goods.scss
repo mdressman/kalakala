@@ -43,12 +43,7 @@
 	display: inline-block;
 	vertical-align: middle;
 }
-.tumblr_posts {
-	@include media(tablet) {
-		width: 600px;
-	}
-	
-}
+
 
 
 .tumblr_photo_post {
