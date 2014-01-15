@@ -1570,8 +1570,8 @@ img {
 }
 @media only screen and (max-height: 43.75em) and (min-width: 62.5em) {
   .series .project.active {
-    padding-top: 13px;
-    padding-top: 1rem;
+    padding-top: 26px;
+    padding-top: 2rem;
     width: 50%;
   }
 }
@@ -1628,6 +1628,10 @@ img {
   }
 }
 
+.series__Navigation {
+  padding-top: 4px;
+  padding-top: 0.30769rem;
+}
 @media only screen and (min-width: 43.75em) {
   .series__Navigation {
     width: 49%;

@@ -52,7 +52,7 @@
 				width: 420px;
 			}
 			@include media(shortscreen) {
-				@include rem('padding-top', $baseline-px);
+				@include rem('padding-top', $baseline-px * 2);
 				width: 50%;
 			}
 		}
@@ -124,7 +124,7 @@
 	@extend %cf;
 
 
-
+	@include rem('padding-top', 4px);
 	@include media(tablet) {
 		width: 49%;
 		padding-left: 16px;
