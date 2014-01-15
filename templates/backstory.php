@@ -21,7 +21,7 @@ get_header(); ?>
 		<section id="backstory" class="page__Container">
 			<h1 class="page__Title"><?php the_title(); ?></h1>
 			<div class="videoContainer" <?php if(get_field('backstory_video_id')): ?> data-video="<iframe src='//player.vimeo.com/video/<?php echo $vimeoID; ?>?autoplay=1' width='900' height='506' frameborder='0' webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>" <?php endif;?>>
-	        	<img src="<?php echo $fallbackImage[0]; ?>" class="big-image" />
+	        	<img src="<?php echo $fallbackImage[0]; ?>" class="big-image" alt=""/>
 	        	<?php if(get_field('backstory_video_id')): ?>
 	        		<a href='#' class='playButton'>Play</a>
 	        	<?php endif; ?>
