@@ -28,7 +28,7 @@ get_header(); ?>
 	?>
 		
 	  	<div class="swiper-slide work-slide"> <!-- style="background: url(<?php echo $image[0]; ?>) no-repeat; background-size: 100% auto;" -->
-			<img src="<?php echo $image[0]; ?>" />
+			<img src="<?php echo $image[0]; ?>" alt=""/>
 			<div class="series-wrapper">
 				<?php get_template_part('templates/content', 'series'); 	?>			  
 			</div>
