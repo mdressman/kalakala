@@ -3315,13 +3315,14 @@ jQuery(document).ready(function($) {
 		}, 200);
     }
 
-
-    $('.swiper-slide').each(function(i, slide) {
-		var img = $(slide).find('img');
-		var src = $(img).attr('src');
-		$(img).hide();
-		$(slide).backstretch(src);
-    });
+    if(isMobile || windowWidth > 1500) {
+		$('.swiper-slide').each(function(i, slide) {
+			var img = $(slide).find('img');
+			var src = $(img).attr('src');
+			$(img).hide();
+			$(slide).backstretch(src);
+		});
+	}
 	
 	
 	$nav = $('.nextPrevIcon.previous');
@@ -3331,6 +3332,8 @@ jQuery(document).ready(function($) {
 	     window.location=$(this).find("a").attr("href");  
 	     return false;
 	});
+
+	$('.swiper-container').css('height', windowHeight);
 
 
 
