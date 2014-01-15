@@ -3314,6 +3314,14 @@ jQuery(document).ready(function($) {
 			"opacity": 1
 		}, 200);
     }
+
+
+    $('.swiper-slide').each(function(i, slide) {
+		var img = $(slide).find('img');
+		var src = $(img).attr('src');
+		$(img).hide();
+		$(slide).backstretch(src);
+    });
 	
 	
 	$nav = $('.nextPrevIcon.previous');
