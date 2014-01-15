@@ -216,7 +216,7 @@
 	font-weight: 600;
 	@extend %upcase;
 	letter-spacing: .25rem;
-	@include rem('letter-spacing', 2px);
+	@include rem('letter-spacing', 3px);
 	margin: 0;
 	@include rem('padding', 12px 0 10px);
 
