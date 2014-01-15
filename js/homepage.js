@@ -99,7 +99,7 @@ jQuery(document).ready(function($) {
 
             // }
 
-			// $('body').on('click', function() {
+			// $('body').not('#soundControl').on('click', function() {
 				
 			// 	var video = BV.getPlayer();
 
