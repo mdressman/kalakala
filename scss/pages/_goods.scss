@@ -57,7 +57,7 @@
 	}
 	.tumblr_caption, .tumblr-title {
 		@extend %ib;
-		width: 350px;
+		max-width: 280px;
 		@include media(mobile) {
 			width: 100%;
 			margin-right: 0;
