@@ -15,8 +15,8 @@
 			<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 		<?php endif; ?>
         <title><?php bloginfo('name'); ?> | <?php is_front_page() ? bloginfo('description') : wp_title('|'); ?></title>
-		<meta name="author" content="">
-		<link rel="author" href="">
+		<!-- <meta name="author" content="">
+		<link rel="author" href=""> -->
 		<?php wp_head() ?>
     </head>
     <body <?php body_class() ?>>
