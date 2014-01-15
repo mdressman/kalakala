@@ -1743,6 +1743,14 @@ img {
 }
 
 @media only screen and (max-width: 43.6875em) {
+  .series-link {
+    display: block;
+    padding: 8px 0 0;
+    padding:  0.61538rem 0 0;
+  }
+}
+
+@media only screen and (max-width: 43.6875em) {
   .series-wrapper .description {
     opacity: 0;
     height: 0;
@@ -1760,12 +1768,14 @@ img {
   background: #231f20;
   left: 0;
   right: 0;
+  padding: 7px;
+  padding: 0.53846rem;
 }
 
 .swiper-pagination-switch {
-  width: 5px;
-  height: 5px;
-  border-radius: 10px;
+  width: 8px;
+  height: 8px;
+  border-radius: 8px;
   background: #fff1cd;
   display: inline-block;
   margin: 0 5px;

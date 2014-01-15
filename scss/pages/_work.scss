@@ -78,6 +78,14 @@
 	}
 }
 
+
+.series-link {
+	@include media(mobile) {
+		display: block;
+		@include rem('padding', 8px 0 0);
+	}
+}
+
 .series-wrapper .description {
 	@include media(mobile) {
 		opacity: 0;
@@ -99,13 +107,14 @@
 	background: $black;
 	left: 0;
 	right: 0;
+	@include rem('padding', 7px);
 	
 
 }
 .swiper-pagination-switch {
-	width: 5px;
-	height: 5px;
-	border-radius: 10px;
+	width: 8px;
+	height: 8px;
+	border-radius: 8px;
 	background: $yellow;
 	display: inline-block;
 	margin: 0 5px;
