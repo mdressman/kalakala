@@ -295,21 +295,27 @@
 }
 
 .singlePost__Nav {
-	a {
+	.postNavLink {
 		@extend %ab;
 		@extend %hv-center;
-		color: $grey;
-		letter-spacing: .125rem;
-		@include media(tablet) {
+		a {
+			color: $grey;
 			&:hover {
 				color: $orange;
 			}
 		}
+		letter-spacing: .125rem;
+		
 		@include media(desktop){
 			bottom: auto;
 			top: 80px;
 			height: 84px;
 			width: 84px;
+			a {
+				display: block;
+				height: 84px;
+				width: 84px;
+			}
 			
 			&.nextPost {
 				left: auto;

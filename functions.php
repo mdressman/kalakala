@@ -2,7 +2,17 @@
 
 
 
-
+add_filter('wp_headers', 'cdfie_add_header');
+/*
+ * Adds a header to WordPress
+ *
+ * @return array Where header => header value
+ */
+function cdfie_add_header($headers)
+{
+    $headers['X-UA-Compatible'] = 'IE=edge,chrome=1';
+    return $headers;
+}
 
 
 

@@ -563,11 +563,11 @@ table {
   text-transform: uppercase;
 }
 
-.page__Container, .singlePost__Nav a i, #page-header, #menu-primary, #menu-social-nav .icon-envelope, .series__Container, #playArea, .work-slide, .videoContainer, .relative {
+.page__Container, .singlePost__Nav .postNavLink i, #page-header, #menu-primary, #menu-social-nav .icon-envelope, .series__Container, #playArea, .work-slide, .videoContainer, .relative {
   position: relative;
 }
 
-.playButton, .singlePost__Nav a, .previous, .next, .previous .relative i, .next .relative i, #playArea .video, .backToMainMenu {
+.playButton, .singlePost__Nav .postNavLink, .previous, .next, .previous .relative i, .next .relative i, #playArea .video, .backToMainMenu {
   position: absolute;
 }
 
@@ -575,7 +575,7 @@ table {
   position: fixed;
 }
 
-.playButton, .singlePost__Nav a, .previous .relative i, .next .relative i {
+.playButton, .singlePost__Nav .postNavLink, .previous .relative i, .next .relative i {
   top: 0;
   bottom: 0;
   right: 0;
@@ -728,29 +728,34 @@ table {
   }
 }
 
-.singlePost__Nav a {
-  color: #d4cec6;
+.singlePost__Nav .postNavLink {
   letter-spacing: .125rem;
 }
-@media only screen and (min-width: 43.75em) {
-  .singlePost__Nav a:hover {
-    color: #d36327;
-  }
+.singlePost__Nav .postNavLink a {
+  color: #d4cec6;
+}
+.singlePost__Nav .postNavLink a:hover {
+  color: #d36327;
 }
 @media only screen and (min-width: 71.25em) {
-  .singlePost__Nav a {
+  .singlePost__Nav .postNavLink {
     bottom: auto;
     top: 80px;
     height: 84px;
     width: 84px;
   }
-  .singlePost__Nav a.nextPost {
+  .singlePost__Nav .postNavLink a {
+    display: block;
+    height: 84px;
+    width: 84px;
+  }
+  .singlePost__Nav .postNavLink.nextPost {
     left: auto;
     margin-right: 32px;
     margin-right: -6rem;
     margin-right: -12vw;
   }
-  .singlePost__Nav a.prevPost {
+  .singlePost__Nav .postNavLink.prevPost {
     right: auto;
     margin-left: 32px;
     margin-left: -6rem;
@@ -759,30 +764,30 @@ table {
   }
 }
 @media only screen and (min-width: 71.25em) and (min-width: 71.25em) {
-  .singlePost__Nav a {
+  .singlePost__Nav .postNavLink {
     top: 0;
     bottom: 0;
   }
 }
-.singlePost__Nav a i {
+.singlePost__Nav .postNavLink i {
   top: -13px;
   top: -1rem;
 }
 @media only screen and (max-width: 71.25em) {
-  .singlePost__Nav a {
+  .singlePost__Nav .postNavLink {
     top: -75px;
     left: 13px;
     left: 1rem;
     right: auto;
   }
-  .singlePost__Nav a.nextPost {
+  .singlePost__Nav .postNavLink.nextPost {
     left: auto;
     right: 13px;
     right: 1rem;
   }
 }
 @media only screen and (max-width: 43.6875em) {
-  .singlePost__Nav a {
+  .singlePost__Nav .postNavLink {
     top: -60px;
   }
 }

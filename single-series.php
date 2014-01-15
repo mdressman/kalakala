@@ -4,25 +4,16 @@
 <section class="page__Container">
 	<a href="<?php bloginfo('url') ?>/work" class="backToMainMenu"><span class="icon-back"></span><span>back to the main menu</span></a>
 	<h1 class="page__Title"><?php the_title(); ?></h1>
+	<div style="color:white;"></div>
 	<div id="playArea" class="video">
 		<nav class="singlePost__Nav">
-		 <?php $prev_post = get_previous_post();
-		if (!empty( $prev_post )): ?>
-  			<a href="<?php echo get_permalink( $prev_post->ID ); ?>" class="nextPost">
-  				<span class="icon-next icon-big"></span>	
-  				<i>Next Series</i>
-			</a>
-		<?php endif; 
-			  $next_post = get_next_post();
-		if (!empty( $next_post )): ?>
-  			<a href="<?php echo get_permalink( $next_post->ID ); ?>" class="prevPost">
-  				<span class="icon-prev icon-big"></span>
-  				<i>Prev Series</i>
-  			</a>
-		<?php endif; ?>
+		 
+		<?php previous_post_link_plus( array('order_by' => 'post_title', 'loop' => true,  'format'=> '%link', 'end_post' => false, 'link' => '<span class="icon-prev icon-big"></span><br/><i>%title</i>', 'before' => '<div class="postNavLink prevPost">', 'after' => '</div>'
+) ); ?>
+		<?php next_post_link_plus( array('order_by' => 'post_title', 'loop' => true, 'format'=> '%link',  'end_post' => false, 'link' => '<span class="icon-next icon-big"></span><br/><i>%title</i>', 'before' => '<div class="postNavLink nextPost">', 'after' => '</div>') ); ?>
 
 
-	</nav>
+		</nav>
 
 	</div>
 
