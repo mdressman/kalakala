@@ -57,7 +57,7 @@
 	}
 	.tumblr_caption, .tumblr-title {
 		@extend %ib;
-		max-width: 280px;
+		width: 200px;
 		@include media(mobile) {
 			width: 100%;
 			margin-right: 0;
@@ -105,7 +105,7 @@
 	@extend %titleStyle;
 }
 .tumblr_description {
-	max-width: 350px;
+	max-width: 280px;
 }
 #pickings {
 	font-family: "abril-display";
