@@ -1765,6 +1765,10 @@ img {
   }
 }
 
+.work-swiper {
+  max-height: 847px;
+}
+
 .pagination {
   bottom: 0;
   z-index: 9999999999;
