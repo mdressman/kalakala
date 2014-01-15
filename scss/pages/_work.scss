@@ -97,7 +97,10 @@
 
 
 .work-swiper {
-	max-height: 847px;
+	@include media(tablet) {
+		max-height: 847px;
+	}
+	
 }
 
 .pagination {

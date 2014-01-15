@@ -40,9 +40,10 @@ get_header(); ?>
     <?php if(!is_mobile()): ?>
     <a class="previous nextPrevIcon" href="#"><div class="relative"><i class=""></i></div></a> 
     <a class="next nextPrevIcon" href="#"><div class="relative"><i class=""></i></div></a>
-    <?php else: ?>
-    	<div class="pagination"></div>
+    	
     <?php endif; ?>
 </div> <!-- end swiper-container -->
-
+	<?php if(is_mobile()): ?>
+		<div class="pagination"></div>
+	<?php endif; ?>
 <?php get_footer(); ?>
