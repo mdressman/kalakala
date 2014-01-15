@@ -505,12 +505,12 @@ table {
 }
 
 @media only screen and (min-width: 43.75em) {
-  .titleContainer, .series__Navigation a, .tumblr_photo_post img, .tumblr_photo_post .tumblr_caption, .tumblr_photo_post .tumblr-title, .tumblr_title, #pickings .tumblr_caption > p, #periscope .tumblr_link_post > a, .ib {
+  .titleContainer, .series__Navigation a, .tumblrBlog a, .tumblr_photo_post img, .tumblr_photo_post .tumblr_caption, .tumblr_photo_post .tumblr-title, .tumblr_title, #pickings .tumblr_caption > p, #periscope .tumblr_link_post > a, .ib {
     display: inline-block;
     vertical-align: middle;
     font-size: 0;
   }
-  .titleContainer a, .series__Navigation a a, .tumblr_photo_post img a, .tumblr_photo_post .tumblr_caption a, .tumblr_photo_post .tumblr-title a, .tumblr_title a, #pickings .tumblr_caption > p a, #periscope .tumblr_link_post > a a, .ib a {
+  .titleContainer a, .series__Navigation a a, .tumblrBlog a a, .tumblr_photo_post img a, .tumblr_photo_post .tumblr_caption a, .tumblr_photo_post .tumblr-title a, .tumblr_title a, #pickings .tumblr_caption > p a, #periscope .tumblr_link_post > a a, .ib a {
     font-size: 1rem;
   }
 }

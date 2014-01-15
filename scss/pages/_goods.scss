@@ -9,6 +9,12 @@
 	max-width: 920px;
 	margin: 0 auto;
 
+
+	a {
+		@extend %ib;
+	}
+
+
 	&.alpha {
 		border-top: 1.5px solid $black;
 	}
