@@ -48,3 +48,13 @@
 		}
 	}
 }
+
+.builtbycivilization {
+	@include svg_bg('civilization');
+	@extend %ir;
+	width: 137px;
+	height: 25px;
+	@extend %bl;
+	margin: 0 auto;
+
+}

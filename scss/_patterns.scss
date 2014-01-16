@@ -226,7 +226,7 @@
 
 
 #content-wrap {
-	padding-bottom: 3rem;
+	@include rem('padding-bottom', $baseline-px * 3)
 }
 
 .page-work #content-wrap {

@@ -18,7 +18,7 @@ get_header(); ?>
 	    			<?php the_content(); ?>
 	    			
 	    			<?php the_field('contact_form'); ?>
-	    		
+	    			<a href="http://builtbycivilization.com" target="_blank" class="builtbycivilization">Built by Civilization</a>
 
 	    	</div>
 	    	

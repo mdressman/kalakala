@@ -3,6 +3,12 @@
 	@include rem('padding-bottom', $baseline-px * 5);
 
 }
+
+.page-the-goods {
+	#content-wrap {
+		padding-bottom: 0;
+	}
+}
 .tumblrBlog {
 	border-bottom: 1.5px solid $black;
 	text-align: left;

@@ -531,7 +531,7 @@ table {
   }
 }
 
-.playButton, .nextPrevIcon i, form input, form textarea, #menu-primary, #menu-primary a, .series .project.active {
+.playButton, .nextPrevIcon i, form input, form textarea, #menu-primary, #menu-primary a, .series .project.active, .builtbycivilization {
   display: block;
 }
 
@@ -591,7 +591,7 @@ table {
   overflow: hidden;
 }
 
-.playButton, .nextPrevIcon i, .logo, .ir {
+.playButton, .nextPrevIcon i, .logo, .builtbycivilization, .ir {
   font: 0/0 a;
   text-shadow: none;
   color: transparent;
@@ -666,6 +666,7 @@ table {
 }
 
 #content-wrap {
+  padding-bottom: 39px;
   padding-bottom: 3rem;
 }
 
@@ -1896,9 +1897,23 @@ img {
   color: white;
 }
 
+.builtbycivilization {
+  background-image: url("civilization.png");
+  background-image: none, url("civilization.svg");
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  width: 137px;
+  height: 25px;
+  margin: 0 auto;
+}
+
 #goods {
   padding-bottom: 65px;
   padding-bottom: 5rem;
+}
+
+.page-the-goods #content-wrap {
+  padding-bottom: 0;
 }
 
 .tumblrBlog {
