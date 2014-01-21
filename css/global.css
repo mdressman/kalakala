@@ -1193,9 +1193,10 @@ img {
 
 #mobileMenuToggle {
   position: absolute;
-  top: 1em;
-  right: 2em;
+  top: 0px;
+  right: 0px;
   font-size: 200%;
+  padding: 1em;
   -webkit-transition: opacity 0.35s ease;
   -moz-transition: opacity 0.35s ease;
   transition: opacity 0.35s ease;

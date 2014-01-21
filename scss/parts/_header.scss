@@ -141,8 +141,9 @@
 }
 
 #mobileMenuToggle {
-	@include position(absolute, 1em 2em 0 0);
+	@include position(absolute, 0px 0px 0 0);
 	font-size: 200%;
+	padding: 1em;
 	@include transition (opacity .35s ease);
 	&:hover {
 		opacity: .75;
