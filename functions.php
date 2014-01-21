@@ -16,16 +16,16 @@ function cdfie_add_header($headers)
 
 
 
-$url = 'http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js'; // the URL to check against  
+$url = 'http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js'; // the URL to check against  
 $test_url = @fopen($url,'r'); // test parameters  
 if( $test_url !== false ) { // test if the URL exists  
 
     function load_external_jQuery() { // load external file  
         wp_deregister_script( 'jquery' ); // deregisters the default WordPress jQuery  
         if(is_page('hello') || is_page('the-goods')):
-        	wp_register_script('jquery', 'http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js', false, 02012014, false); // register the external file  
+        	wp_register_script('jquery', 'http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js', false, 02012014, false); // register the external file  
         else:
-        	wp_register_script('jquery', 'http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js', false, 02012014, true); // register the external file  
+        	wp_register_script('jquery', 'http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js', false, 02012014, true); // register the external file  
         endif;
         wp_enqueue_script('jquery'); // enqueue the external file  
     }  
