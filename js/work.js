@@ -18,6 +18,10 @@ jQuery(document).ready(function($) {
 		createPagination = true;
 	}
 
+	if(windowWidth < 700) {
+		slides = 1;
+	}
+
 	
 	if(windowWidth > 1700) {
 		slides = 5;
@@ -43,11 +47,11 @@ jQuery(document).ready(function($) {
 	});
 
 
-    if(!isMobile) {
-		$(".nextPrevIcon i").approach({
-			"opacity": 1
-		}, 200);
-    }
+    
+	$(".nextPrevIcon i").approach({
+		"opacity": 1
+	}, 200);
+    
 
     if(isMobile || windowWidth > 1500) {
 		$('.swiper-slide').each(function(i, slide) {

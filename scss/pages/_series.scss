@@ -101,7 +101,7 @@
 
 .backToMainMenu {
 	@extend %ab;
-	color: $brown;
+	color: lighten($orange, 10%);
 	@include rem('top', -($baseline-px * 2));
 
 	&:hover {
@@ -112,9 +112,7 @@
 		margin-left: 5px;
 		font-style: italic;
 	}
-	@include media(notDesktop) {
-		display: none;
-	}
+	
 }
 
 

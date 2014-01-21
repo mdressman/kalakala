@@ -305,8 +305,9 @@
 			}
 		}
 		letter-spacing: .125rem;
-		
+		display: none;
 		@include media(desktop){
+			display: block;
 			bottom: auto;
 			top: 80px;
 			height: 84px;

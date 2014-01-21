@@ -731,6 +731,7 @@ table {
 
 .singlePost__Nav .postNavLink {
   letter-spacing: .125rem;
+  display: none;
 }
 .singlePost__Nav .postNavLink a {
   color: #d4cec6;
@@ -740,6 +741,7 @@ table {
 }
 @media only screen and (min-width: 71.25em) {
   .singlePost__Nav .postNavLink {
+    display: block;
     bottom: auto;
     top: 80px;
     height: 84px;
@@ -1616,7 +1618,7 @@ img {
 }
 
 .backToMainMenu {
-  color: #9d958c;
+  color: #de814f;
   top: -26px;
   top: -2rem;
 }
@@ -1627,11 +1629,6 @@ img {
   vertical-align: middle;
   margin-left: 5px;
   font-style: italic;
-}
-@media only screen and (max-width: 71.25em) {
-  .backToMainMenu {
-    display: none;
-  }
 }
 
 .series__Navigation {
