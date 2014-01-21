@@ -46,7 +46,22 @@ img {
 	max-width: 100%;
 	height: auto;
 }
-#content-wrap {
+
+
+
+
+
+
+.title404 {
+	
+	color: $yellow;
+	background: $black;
+	@include rem('padding', 24px 0);
+	@include rem('margin-top', 24px);
+	@extend %center;
+	margin: 0 auto;
+	@include rem('letter-spacing', 3px);
+	
 
 }
 @import 'parts/header', 'parts/swiper', 'parts/video';
