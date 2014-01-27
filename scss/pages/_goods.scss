@@ -114,6 +114,16 @@
 .tumblr_description {
 	max-width: 280px;
 }
+.tumblr_video_post {
+	max-width: 500px;
+	.tumblr_video{
+		width: 50%;
+	}	
+	.tumblr_caption {
+		padding-top: 1em;
+	}
+}
+
 #pickings {
 	font-family: "abril-display";
 	.tumblr_caption > p {
