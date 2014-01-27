@@ -46,9 +46,12 @@ Template Name: The Goods
 					'</div></li></ol>'
 				);
 			} else if (tumblr_api_read['posts'][0]['type'] == 'link') {
-				document.write('<div class="blogTitle">' + tumblr_api_read['posts'][0]['link-title'] + '</div>');
-				document.write('<div class="blogText">' + tumblr_api_read['posts'][0]['link-description'] + '</div>');
-				document.write('<div class="blogText">' + tumblr_api_read['posts'][0]['link-url'] + '</div>');
+				document.write(
+					'<ol class="tumblr_posts"><li class="tumblr_post tumblr_link_post">' +
+					'<a href="' + tumblr_api_read['posts'][0]['link-url'] + '"><div class="tumblr_title">' +
+					tumblr_api_read['posts'][0]['link-text'] +
+					'</div></a></li></ol>'
+				);
 			} else if (tumblr_api_read['posts'][0]['type'] == 'video') {
 				document.write(
 					'<ol class="tumblr_posts"><li class="tumblr_post tumblr_video_post">' +
@@ -56,6 +59,21 @@ Template Name: The Goods
 					'<div class="tumblr_caption">' + 
 					tumblr_api_read['posts'][0]['video-caption'] + 
 					'</div></li></ol>'
+				);
+			} else if (tumblr_api_read['posts'][0]['type'] == 'quote') {
+				document.write(
+					'<ol class="tumblr_posts"><li class="tumblr_post tumblr_quote_post">' +
+					'<div class="tumblr_title">"' + 
+					tumblr_api_read['posts'][0]['quote-text'] + '"</div> – ' +
+					tumblr_api_read['posts'][0]['quote-source'] +
+					'</li></ol>'
+				);
+			} else if (tumblr_api_read['posts'][0]['type'] == 'conversation') {
+				document.write(
+					'<ol class="tumblr_posts"><li class="tumblr_post tumblr_chat_post">' +
+					'<div class="tumblr_title">' + 
+					tumblr_api_read['posts'][0]['conversation-title'] + '</div>' +
+					'</li></ol>'
 				);
 			} else {
 				document.write('<div class="blogText">whoops.</div>');	
