@@ -2028,9 +2028,6 @@ img {
 .tumblr_video_post {
   max-width: 500px;
 }
-.tumblr_video_post .tumblr_video {
-  width: 50%;
-}
 .tumblr_video_post .tumblr_caption {
   padding-top: 1em;
 }

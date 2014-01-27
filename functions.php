@@ -76,8 +76,8 @@ function theme_enqueue_scripts(){
 		wp_enqueue_script('home');
 	elseif(is_page('work')):
 		wp_enqueue_script('work');
-	// elseif(is_page('the-goods')):
-	// 	wp_enqueue_script('goods');
+	elseif(is_page('the-goods')):
+		wp_enqueue_script('goods');
 	elseif(is_page('backstory')):
 		wp_enqueue_script('backstory');
 	elseif ( 'series' == get_post_type() || is_single() ) :
