@@ -3,9 +3,6 @@
 Template Name: Full Screen Video
 */
 
-if(is_touch()) {
-	wp_redirect( site_url( 'work' ) );
-}
 get_header(); ?>
 <?php if (is_page()): the_post() ?>
 
