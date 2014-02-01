@@ -116,6 +116,15 @@
 }
 .tumblr_video_post {
 	max-width: 500px;
+	width: 500px;
+
+	@include media(mobile) {
+		width: 280px;
+	}
+
+	@include media(tablet) {
+		width: 500px;
+	}
 		
 	.tumblr_caption {
 		padding-top: 1em;
@@ -162,6 +171,14 @@
 		background-position: -10px -344px;
 		width: 162px;
 		height: 74px;
+	}
+	.tumblr_caption > p {
+		@extend %titleStyle;
+		a {
+			display: block;
+			@include rem('font-size', $baseline-px);
+			line-height: 1.5;
+		}
 	}
 } 
 #makeyourslikemine {

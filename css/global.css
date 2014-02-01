@@ -505,12 +505,12 @@ table {
 }
 
 @media only screen and (min-width: 43.75em) {
-  .titleContainer, .series__Navigation a, .tumblrBlog a, .tumblr_photo_post img, .tumblr_photo_post .tumblr_caption, .tumblr_photo_post .tumblr-title, .tumblr_title, #pickings .tumblr_caption > p, #periscope .tumblr_link_post > a, .ib {
+  .titleContainer, .series__Navigation a, .tumblrBlog a, .tumblr_photo_post img, .tumblr_photo_post .tumblr_caption, .tumblr_photo_post .tumblr-title, .tumblr_title, #pickings .tumblr_caption > p, #periscope .tumblr_link_post > a, #lightbox .tumblr_caption > p, .ib {
     display: inline-block;
     vertical-align: middle;
     font-size: 0;
   }
-  .titleContainer a, .series__Navigation a a, .tumblrBlog a a, .tumblr_photo_post img a, .tumblr_photo_post .tumblr_caption a, .tumblr_photo_post .tumblr-title a, .tumblr_title a, #pickings .tumblr_caption > p a, #periscope .tumblr_link_post > a a, .ib a {
+  .titleContainer a, .series__Navigation a a, .tumblrBlog a a, .tumblr_photo_post img a, .tumblr_photo_post .tumblr_caption a, .tumblr_photo_post .tumblr-title a, .tumblr_title a, #pickings .tumblr_caption > p a, #periscope .tumblr_link_post > a a, #lightbox .tumblr_caption > p a, .ib a {
     font-size: 1rem;
   }
 }
@@ -2015,7 +2015,7 @@ img {
   max-width: 280px;
 }
 @media only screen and (max-width: 43.6875em) {
-  .tumblr_title, #pickings .tumblr_caption > p, #periscope .tumblr_link_post > a, #lightbox .tumblr_link_post > a {
+  .tumblr_title, #pickings .tumblr_caption > p, #periscope .tumblr_link_post > a, #lightbox .tumblr_caption > p {
     margin: 14px 0;
     margin:  1.07692rem 0;
   }
@@ -2027,6 +2027,17 @@ img {
 
 .tumblr_video_post {
   max-width: 500px;
+  width: 500px;
+}
+@media only screen and (max-width: 43.6875em) {
+  .tumblr_video_post {
+    width: 280px;
+  }
+}
+@media only screen and (min-width: 43.75em) {
+  .tumblr_video_post {
+    width: 500px;
+  }
 }
 .tumblr_video_post .tumblr_caption {
   padding-top: 1em;
@@ -2070,6 +2081,12 @@ img {
   background-position: -10px -344px;
   width: 162px;
   height: 74px;
+}
+#lightbox .tumblr_caption > p a {
+  display: block;
+  font-size: 13px;
+  font-size: 1rem;
+  line-height: 1.5;
 }
 
 #makeyourslikemine {
