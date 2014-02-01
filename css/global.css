@@ -555,7 +555,7 @@ table {
   text-decoration: none;
 }
 
-.page__Title, .titleContainer, .section__Title, .insetBorder, #menu-social-nav, .series__Navigation h3, .series__Navigation a, .page-work .series, .pagination, .gform_footer, .logoColumn {
+.page__Title, .titleContainer, .section__Title, .insetBorder, .title404, #menu-social-nav, .series__Navigation h3, .series__Navigation a, .page-work .series, .pagination, .gform_footer, .logoColumn {
   text-align: center;
 }
 
@@ -1061,6 +1061,18 @@ img {
   height: auto;
 }
 
+.title404 {
+  color: #fff1cd;
+  background: #231f20;
+  padding: 24px 0;
+  padding:  1.84615rem 0;
+  margin-top: 24px;
+  margin-top: 1.84615rem;
+  margin: 0 auto;
+  letter-spacing: 3px;
+  letter-spacing: 0.23077rem;
+}
+
 #page-header {
   overflow: hidden;
   padding: 1rem;
@@ -1187,15 +1199,16 @@ img {
     margin-top: 0.61538rem;
     position: absolute;
     left: 50%;
-    margin-left: -85px;
+    margin-left: -67.5px;
   }
 }
 
 #mobileMenuToggle {
   position: absolute;
-  top: 1em;
-  right: 2em;
+  top: 0px;
+  right: 0px;
   font-size: 200%;
+  padding: 1em;
   -webkit-transition: opacity 0.35s ease;
   -moz-transition: opacity 0.35s ease;
   transition: opacity 0.35s ease;
@@ -2010,6 +2023,13 @@ img {
 
 .tumblr_description {
   max-width: 280px;
+}
+
+.tumblr_video_post {
+  max-width: 500px;
+}
+.tumblr_video_post .tumblr_caption {
+  padding-top: 1em;
 }
 
 #pickings {

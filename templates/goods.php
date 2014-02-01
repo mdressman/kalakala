@@ -30,21 +30,31 @@ Template Name: The Goods
 				var firstImage = $(bodyContent).find('img:first').attr('src');
 				var postImageSrc = '';
 				var postParagraph = '';
+
 				if (firstImage){
 					postImageSrc = '<a href="' + tumblr_api_read['posts'][0]['url'] + '"><img class="tumblr_photo" src="' + firstImage + '" /></a>';
 				}
 
-				if (firstParagraph) {
-					postParagraph = '<p>'+ firstParagraph + '</p>';
-				}
+				if (!postImageSrc) {
+					
+					document.write(
+						'<ol class="tumblr_posts"><li class="tumblr_post tumblr_video_post"><div class="tumblr_video">' +
+						tumblr_api_read['posts'][0]['regular-body'] +	
+						'</div></li></ol>'
+					);
 
-				document.write(
-					'<ol class="tumblr_posts"><li class="tumblr_post tumblr_photo_post">' +
-					postImageSrc +	
-					'<div class="tumblr_title">' + 
-					tumblr_api_read['posts'][0]['regular-title'] +
-					'</div></li></ol>'
-				);
+				}  
+
+				else if(postImageSrc) {
+
+					document.write(
+						'<ol class="tumblr_posts"><li class="tumblr_post tumblr_photo_post">' +
+						postImageSrc +	
+						'<div class="tumblr_title">' + 
+						tumblr_api_read['posts'][0]['regular-title'] +
+						'</div></li></ol>'
+					);
+				}
 			} else if (tumblr_api_read['posts'][0]['type'] == 'link') {
 				document.write(
 					'<ol class="tumblr_posts"><li class="tumblr_post tumblr_link_post">' +
