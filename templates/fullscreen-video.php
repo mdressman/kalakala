@@ -3,7 +3,7 @@
 Template Name: Full Screen Video
 */
 
-if(is_mobile()) {
+if(wp_is_mobile()) {
 	wp_redirect( site_url( 'work' ) );
 }
 get_header(); ?>
